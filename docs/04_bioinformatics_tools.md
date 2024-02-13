@@ -1,0 +1,109 @@
+# Microbiome Bioinformatics Tools
+## Read quality control Tools
+We categorized the quality control (QC) tools under the bioinformatics tools. Most of the QC tools are available via the bioconda channel. Below are some of the most common bioinformatics tools used to understand read features and their quality scores. You can click on the hyperlink to learn more about installing the software.
+
+- [Seqkit](https://anaconda.org/bioconda/seqkit/) for simple statistics [@seqkit2016].
+- [FastQC](https://anaconda.org/bioconda/fastqc/) for quality assessment of bases [@fastqc2018].
+- [MultiQC](https://anaconda.org/bioconda/multiqc/) for summarizing FastQC metrics [@multiqc2016].
+- [BBMap](https://anaconda.org/bioconda/bbmap) platform for read trimming and decontamination [@bbmap2016].
+- [Trimmommatic](https://anaconda.org/bioconda/trimmomatic/) is a flexible read-trimming tool for Illumina NGS data [@trimmomatic2014].
+- [Kneaddata](https://anaconda.org/bioconda/kneaddata/) via bioconda channel for performing quality control on metagenomic sequencing data. [@kneaddata2022].
+- [Kneaddata](https://anaconda.org/biobakery/kneaddata/) via the biobakery channel for performing quality control on metagenomic sequencing data [@kneaddata2022].
+
+> Note that the links for each tool may need to be updated. Make sure to check for the latest instructions online.
+
+### Installing using conda or mamba
+Direct installation of the bioinformatics tools is much easier using the conda or mamba package management system.
+
+```bash
+mamba install -c bioconda seqkit
+mamba install -c bioconda fastqc
+mamba install -c bioconda multiqc
+mamba install -c bioconda bbmap
+mamba install -c bioconda trimmommatic
+mamba install -c bioconda kneaddata
+mamba install -c biobakery kneaddata
+```
+
+<br>
+
+## Creating `readqc` env from YAML file
+*Filename: environment.yml*
+
+```bash
+name: readqc
+channels:
+    - bioconda
+    - biobakery
+dependencies:
+    - seqkit =2.3.1
+    - fastqc =0.12.1
+    - bbmap =39.01
+    - multiqc =1.14
+    - trimmomatic =0.39
+    - knead-data =0.12.0
+```
+
+```bash
+conda activate base
+mamba env create --name readqc --file environment.yaml
+```
+
+## Microbial composition profiling tools
+### Mothur pipeline 
+- Most famous for profiling microbial composition from 16S rRNA sequencing data.
+- Mothur is an open-source software package for bioinformatics data processing.
+- Mothur pipeline is a famous platform comprising over 145 tools that can be integrated for a desired pipeline. 
+- Mothur has a [basic tutorial](https://mothur.org/wiki/miseq_sop/) that help users get started with 16S rRNA gene analysis. 
+- We can download a stable platform from [here](https://github.com/mothur/mothur/releases/).
+
+### QIIME2 pipeline
+- Most famous for profiling microbial composition from 16S rRNA sequencing data.
+- QIIME2 is an open-source microbiome analysis platform with integrated software for quality control, such as DADA2.
+- It is a very famous platform with an active community forum. 
+- QIIME2 has [profound tutorials](https://docs.qiime2.org/2022.2/tutorials/) that help users get started with 16S rRNA gene analysis. 
+- We can install the latest version from [here](https://docs.qiime2.org/2022.2/install/).
+
+### MetaPhlAn pipeline
+- MetaPhlAn is an open-source pipeline for taxonomic profiling from metagenomic shotgun sequencing data.
+- MetaPhlAn [tutorial](https://github.com/biobakery/biobakery/wiki/metaphlan3) provide a step-by-step guidance for taxonomic profiling from different environmental samples.
+
+## Functional and Metabolic Analysis Network tools
+### HUMAnN pipeline
+- HUMAnN (the HMP Unified Metabolic Analysis Network) is an open-source pipeline for functional profiling from metagenomic sequencing data.
+- HUMAnN [tutorial](https://github.com/biobakery/biobakery/wiki/humann3) provide a step-by-step guidance for functional profiling.
+
+## Installing microbiome pipeline using mamba
+Using a conda or mamba package management system is much easier to install bioinformatics tools.
+
+```bash
+mamba install -c bioconda mothur
+mamba install -c qiime2 qiime2
+mamba install -c bioconda metaphors
+mamba install -c biobakery humann
+mamba install -c bioconda humann
+```
+
+<br>
+
+## Creating `microbiome` env from YAML file
+Filename: environment.yml
+
+```bash
+name: microbiome
+channels:
+    - bioconda
+    - biobakery
+    - qiime2
+dependencies:
+    - mothur =1.48.0
+    - qiime2 =2023.2.0
+    - metaphor =4.0.6
+    - humann =3.6
+```
+
+```bash
+conda activate base
+mamba env create --name microbiome --file environment.yaml
+```
+

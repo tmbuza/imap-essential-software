@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>5 Microbiome Bioinformatics Tools | IMAP: Integrated Microbiome Analysis Pipelines</title>
+<meta name="author" content="Teresia Mrema-Buza">
+<meta name="description" content="5.1 Read quality control Tools We categorized the quality control (QC) tools under the bioinformatics tools. Most of the QC tools are available via the bioconda channel. Below are some of the most...">
+<meta name="generator" content="bookdown 0.37 with bs4_book()">
+<meta property="og:title" content="5 Microbiome Bioinformatics Tools | IMAP: Integrated Microbiome Analysis Pipelines">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://tmbuza.github.io/imap-essential-software/microbiome-bioinformatics-tools.html">
+<meta property="og:image" content="https://tmbuza.github.io/imap-essential-software/images/planning.png">
+<meta property="og:description" content="5.1 Read quality control Tools We categorized the quality control (QC) tools under the bioinformatics tools. Most of the QC tools are available via the bioconda channel. Below are some of the most...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="5 Microbiome Bioinformatics Tools | IMAP: Integrated Microbiome Analysis Pipelines">
+<meta name="twitter:description" content="5.1 Read quality control Tools We categorized the quality control (QC) tools under the bioinformatics tools. Most of the QC tools are available via the bioconda channel. Below are some of the most...">
+<meta name="twitter:image" content="https://tmbuza.github.io/imap-essential-software/images/planning.png">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Sen-0.4.8/font.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM%20Mono&amp;display=swap" rel="stylesheet">
+<link href="libs/Bitter-0.4.8/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.6.1/transition.js"></script><script src="libs/bs3compat-0.6.1/tabs.js"></script><script src="libs/bs3compat-0.6.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+          margin-bottom: 1em;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="End-to-End Practical User Guides Using Integrated Approaches"><big>IMAP:</big> Integrated Microbiome Analysis Pipelines</a>:
+        <small class="text-muted">End-to-End Practical User Guides Using Integrated Approaches</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Microbiome Data Analysis Toolkit</a></li>
+<li class="book-part">SOFTWARE CATEGORIES</li>
+<li><a class="" href="types-of-essential-software.html"><span class="header-section-number">1</span> Types of Essential Software</a></li>
+<li><a class="" href="environment-management-system.html"><span class="header-section-number">2</span> Environment Management System</a></li>
+<li><a class="" href="snakemake-workflow-management-system.html"><span class="header-section-number">3</span> Snakemake workflow management system</a></li>
+<li><a class="" href="data-science-visualization-tools.html"><span class="header-section-number">4</span> Data Science &amp; Visualization Tools</a></li>
+<li><a class="active" href="microbiome-bioinformatics-tools.html"><span class="header-section-number">5</span> Microbiome Bioinformatics Tools</a></li>
+<li class="book-part">APPENDIX</li>
+<li><a class="" href="imap-github-repos.html"><span class="header-section-number">A</span> IMAP GitHub Repos</a></li>
+<li><a class="" href="session-information.html"><span class="header-section-number">B</span> Session Information</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/tmbuza/imap-essential-software.git">View book source <i class="fas fa-air-freshener"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="microbiome-bioinformatics-tools" class="section level1" number="5">
+<h1>
+<span class="header-section-number">5</span> Microbiome Bioinformatics Tools<a class="anchor" aria-label="anchor" href="#microbiome-bioinformatics-tools"><i class="fas fa-link"></i></a>
+</h1>
+<div id="read-quality-control-tools" class="section level2" number="5.1">
+<h2>
+<span class="header-section-number">5.1</span> Read quality control Tools<a class="anchor" aria-label="anchor" href="#read-quality-control-tools"><i class="fas fa-link"></i></a>
+</h2>
+<p>We categorized the quality control (QC) tools under the bioinformatics tools. Most of the QC tools are available via the bioconda channel. Below are some of the most common bioinformatics tools used to understand read features and their quality scores. You can click on the hyperlink to learn more about installing the software.</p>
+<ul>
+<li>
+<a href="https://anaconda.org/bioconda/seqkit/">Seqkit</a> for simple statistics<span class="citation"><sup>[5]</sup></span>.</li>
+<li>
+<a href="https://anaconda.org/bioconda/fastqc/">FastQC</a> for quality assessment of bases<span class="citation"><sup>[6]</sup></span>.</li>
+<li>
+<a href="https://anaconda.org/bioconda/multiqc/">MultiQC</a> for summarizing FastQC metrics<span class="citation"><sup>[7]</sup></span>.</li>
+<li>
+<a href="https://anaconda.org/bioconda/bbmap">BBMap</a> platform for read trimming and decontamination<span class="citation"><sup>[8]</sup></span>.</li>
+<li>
+<a href="https://anaconda.org/bioconda/trimmomatic/">Trimmommatic</a> is a flexible read-trimming tool for Illumina NGS data<span class="citation"><sup>[9]</sup></span>.</li>
+<li>
+<a href="https://anaconda.org/bioconda/kneaddata/">Kneaddata</a> via bioconda channel for performing quality control on metagenomic sequencing data.<span class="citation"><sup>[10]</sup></span>.</li>
+<li>
+<a href="https://anaconda.org/biobakery/kneaddata/">Kneaddata</a> via the biobakery channel for performing quality control on metagenomic sequencing data<span class="citation"><sup>[10]</sup></span>.</li>
+</ul>
+<blockquote>
+<p>Note that the links for each tool may need to be updated. Make sure to check for the latest instructions online.</p>
+</blockquote>
+<div id="installing-using-conda-or-mamba" class="section level3" number="5.1.1">
+<h3>
+<span class="header-section-number">5.1.1</span> Installing using conda or mamba<a class="anchor" aria-label="anchor" href="#installing-using-conda-or-mamba"><i class="fas fa-link"></i></a>
+</h3>
+<p>Direct installation of the bioinformatics tools is much easier using the conda or mamba package management system.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="microbiome-bioinformatics-tools.html#cb30-1" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda seqkit</span>
+<span id="cb30-2"><a href="microbiome-bioinformatics-tools.html#cb30-2" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda fastqc</span>
+<span id="cb30-3"><a href="microbiome-bioinformatics-tools.html#cb30-3" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda multiqc</span>
+<span id="cb30-4"><a href="microbiome-bioinformatics-tools.html#cb30-4" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda bbmap</span>
+<span id="cb30-5"><a href="microbiome-bioinformatics-tools.html#cb30-5" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda trimmommatic</span>
+<span id="cb30-6"><a href="microbiome-bioinformatics-tools.html#cb30-6" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda kneaddata</span>
+<span id="cb30-7"><a href="microbiome-bioinformatics-tools.html#cb30-7" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> biobakery kneaddata</span></code></pre></div>
+<p><br></p>
+</div>
+</div>
+<div id="creating-readqc-env-from-yaml-file" class="section level2" number="5.2">
+<h2>
+<span class="header-section-number">5.2</span> Creating <code>readqc</code> env from YAML file<a class="anchor" aria-label="anchor" href="#creating-readqc-env-from-yaml-file"><i class="fas fa-link"></i></a>
+</h2>
+<p><em>Filename: environment.yml</em></p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb31-1"><a href="microbiome-bioinformatics-tools.html#cb31-1" tabindex="-1"></a><span class="ex">name:</span> readqc</span>
+<span id="cb31-2"><a href="microbiome-bioinformatics-tools.html#cb31-2" tabindex="-1"></a><span class="ex">channels:</span></span>
+<span id="cb31-3"><a href="microbiome-bioinformatics-tools.html#cb31-3" tabindex="-1"></a>    <span class="ex">-</span> bioconda</span>
+<span id="cb31-4"><a href="microbiome-bioinformatics-tools.html#cb31-4" tabindex="-1"></a>    <span class="ex">-</span> biobakery</span>
+<span id="cb31-5"><a href="microbiome-bioinformatics-tools.html#cb31-5" tabindex="-1"></a><span class="ex">dependencies:</span></span>
+<span id="cb31-6"><a href="microbiome-bioinformatics-tools.html#cb31-6" tabindex="-1"></a>    <span class="ex">-</span> seqkit =2.3.1</span>
+<span id="cb31-7"><a href="microbiome-bioinformatics-tools.html#cb31-7" tabindex="-1"></a>    <span class="ex">-</span> fastqc =0.12.1</span>
+<span id="cb31-8"><a href="microbiome-bioinformatics-tools.html#cb31-8" tabindex="-1"></a>    <span class="ex">-</span> bbmap =39.01</span>
+<span id="cb31-9"><a href="microbiome-bioinformatics-tools.html#cb31-9" tabindex="-1"></a>    <span class="ex">-</span> multiqc =1.14</span>
+<span id="cb31-10"><a href="microbiome-bioinformatics-tools.html#cb31-10" tabindex="-1"></a>    <span class="ex">-</span> trimmomatic =0.39</span>
+<span id="cb31-11"><a href="microbiome-bioinformatics-tools.html#cb31-11" tabindex="-1"></a>    <span class="ex">-</span> knead-data =0.12.0</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="microbiome-bioinformatics-tools.html#cb32-1" tabindex="-1"></a><span class="ex">conda</span> activate base</span>
+<span id="cb32-2"><a href="microbiome-bioinformatics-tools.html#cb32-2" tabindex="-1"></a><span class="ex">mamba</span> env create <span class="at">--name</span> readqc <span class="at">--file</span> environment.yaml</span></code></pre></div>
+</div>
+<div id="microbial-composition-profiling-tools" class="section level2" number="5.3">
+<h2>
+<span class="header-section-number">5.3</span> Microbial composition profiling tools<a class="anchor" aria-label="anchor" href="#microbial-composition-profiling-tools"><i class="fas fa-link"></i></a>
+</h2>
+<div id="mothur-pipeline" class="section level3" number="5.3.1">
+<h3>
+<span class="header-section-number">5.3.1</span> Mothur pipeline<a class="anchor" aria-label="anchor" href="#mothur-pipeline"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Most famous for profiling microbial composition from 16S rRNA sequencing data.</li>
+<li>Mothur is an open-source software package for bioinformatics data processing.</li>
+<li>Mothur pipeline is a famous platform comprising over 145 tools that can be integrated for a desired pipeline.</li>
+<li>Mothur has a <a href="https://mothur.org/wiki/miseq_sop/">basic tutorial</a> that help users get started with 16S rRNA gene analysis.</li>
+<li>We can download a stable platform from <a href="https://github.com/mothur/mothur/releases/">here</a>.</li>
+</ul>
+</div>
+<div id="qiime2-pipeline" class="section level3" number="5.3.2">
+<h3>
+<span class="header-section-number">5.3.2</span> QIIME2 pipeline<a class="anchor" aria-label="anchor" href="#qiime2-pipeline"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Most famous for profiling microbial composition from 16S rRNA sequencing data.</li>
+<li>QIIME2 is an open-source microbiome analysis platform with integrated software for quality control, such as DADA2.</li>
+<li>It is a very famous platform with an active community forum.</li>
+<li>QIIME2 has <a href="https://docs.qiime2.org/2022.2/tutorials/">profound tutorials</a> that help users get started with 16S rRNA gene analysis.</li>
+<li>We can install the latest version from <a href="https://docs.qiime2.org/2022.2/install/">here</a>.</li>
+</ul>
+</div>
+<div id="metaphlan-pipeline" class="section level3" number="5.3.3">
+<h3>
+<span class="header-section-number">5.3.3</span> MetaPhlAn pipeline<a class="anchor" aria-label="anchor" href="#metaphlan-pipeline"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>MetaPhlAn is an open-source pipeline for taxonomic profiling from metagenomic shotgun sequencing data.</li>
+<li>MetaPhlAn <a href="https://github.com/biobakery/biobakery/wiki/metaphlan3">tutorial</a> provide a step-by-step guidance for taxonomic profiling from different environmental samples.</li>
+</ul>
+</div>
+</div>
+<div id="functional-and-metabolic-analysis-network-tools" class="section level2" number="5.4">
+<h2>
+<span class="header-section-number">5.4</span> Functional and Metabolic Analysis Network tools<a class="anchor" aria-label="anchor" href="#functional-and-metabolic-analysis-network-tools"><i class="fas fa-link"></i></a>
+</h2>
+<div id="humann-pipeline" class="section level3" number="5.4.1">
+<h3>
+<span class="header-section-number">5.4.1</span> HUMAnN pipeline<a class="anchor" aria-label="anchor" href="#humann-pipeline"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>HUMAnN (the HMP Unified Metabolic Analysis Network) is an open-source pipeline for functional profiling from metagenomic sequencing data.</li>
+<li>HUMAnN <a href="https://github.com/biobakery/biobakery/wiki/humann3">tutorial</a> provide a step-by-step guidance for functional profiling.</li>
+</ul>
+</div>
+</div>
+<div id="installing-microbiome-pipeline-using-mamba" class="section level2" number="5.5">
+<h2>
+<span class="header-section-number">5.5</span> Installing microbiome pipeline using mamba<a class="anchor" aria-label="anchor" href="#installing-microbiome-pipeline-using-mamba"><i class="fas fa-link"></i></a>
+</h2>
+<p>Using a conda or mamba package management system is much easier to install bioinformatics tools.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="microbiome-bioinformatics-tools.html#cb33-1" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda mothur</span>
+<span id="cb33-2"><a href="microbiome-bioinformatics-tools.html#cb33-2" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> qiime2 qiime2</span>
+<span id="cb33-3"><a href="microbiome-bioinformatics-tools.html#cb33-3" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda metaphors</span>
+<span id="cb33-4"><a href="microbiome-bioinformatics-tools.html#cb33-4" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> biobakery humann</span>
+<span id="cb33-5"><a href="microbiome-bioinformatics-tools.html#cb33-5" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda humann</span></code></pre></div>
+<p><br></p>
+</div>
+<div id="creating-microbiome-env-from-yaml-file" class="section level2" number="5.6">
+<h2>
+<span class="header-section-number">5.6</span> Creating <code>microbiome</code> env from YAML file<a class="anchor" aria-label="anchor" href="#creating-microbiome-env-from-yaml-file"><i class="fas fa-link"></i></a>
+</h2>
+<p>Filename: environment.yml</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="microbiome-bioinformatics-tools.html#cb34-1" tabindex="-1"></a><span class="ex">name:</span> microbiome</span>
+<span id="cb34-2"><a href="microbiome-bioinformatics-tools.html#cb34-2" tabindex="-1"></a><span class="ex">channels:</span></span>
+<span id="cb34-3"><a href="microbiome-bioinformatics-tools.html#cb34-3" tabindex="-1"></a>    <span class="ex">-</span> bioconda</span>
+<span id="cb34-4"><a href="microbiome-bioinformatics-tools.html#cb34-4" tabindex="-1"></a>    <span class="ex">-</span> biobakery</span>
+<span id="cb34-5"><a href="microbiome-bioinformatics-tools.html#cb34-5" tabindex="-1"></a>    <span class="ex">-</span> qiime2</span>
+<span id="cb34-6"><a href="microbiome-bioinformatics-tools.html#cb34-6" tabindex="-1"></a><span class="ex">dependencies:</span></span>
+<span id="cb34-7"><a href="microbiome-bioinformatics-tools.html#cb34-7" tabindex="-1"></a>    <span class="ex">-</span> mothur =1.48.0</span>
+<span id="cb34-8"><a href="microbiome-bioinformatics-tools.html#cb34-8" tabindex="-1"></a>    <span class="ex">-</span> qiime2 =2023.2.0</span>
+<span id="cb34-9"><a href="microbiome-bioinformatics-tools.html#cb34-9" tabindex="-1"></a>    <span class="ex">-</span> metaphor =4.0.6</span>
+<span id="cb34-10"><a href="microbiome-bioinformatics-tools.html#cb34-10" tabindex="-1"></a>    <span class="ex">-</span> humann =3.6</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="microbiome-bioinformatics-tools.html#cb35-1" tabindex="-1"></a><span class="ex">conda</span> activate base</span>
+<span id="cb35-2"><a href="microbiome-bioinformatics-tools.html#cb35-2" tabindex="-1"></a><span class="ex">mamba</span> env create <span class="at">--name</span> microbiome <span class="at">--file</span> environment.yaml</span></code></pre></div>
+
+</div>
+</div>
+
+
+
+  <div class="chapter-nav">
+<div class="prev"><a href="data-science-visualization-tools.html"><span class="header-section-number">4</span> Data Science &amp; Visualization Tools</a></div>
+<div class="next"><a href="imap-github-repos.html"><span class="header-section-number">A</span> IMAP GitHub Repos</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#microbiome-bioinformatics-tools"><span class="header-section-number">5</span> Microbiome Bioinformatics Tools</a></li>
+<li>
+<a class="nav-link" href="#read-quality-control-tools"><span class="header-section-number">5.1</span> Read quality control Tools</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#installing-using-conda-or-mamba"><span class="header-section-number">5.1.1</span> Installing using conda or mamba</a></li></ul>
+</li>
+<li><a class="nav-link" href="#creating-readqc-env-from-yaml-file"><span class="header-section-number">5.2</span> Creating readqc env from YAML file</a></li>
+<li>
+<a class="nav-link" href="#microbial-composition-profiling-tools"><span class="header-section-number">5.3</span> Microbial composition profiling tools</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#mothur-pipeline"><span class="header-section-number">5.3.1</span> Mothur pipeline</a></li>
+<li><a class="nav-link" href="#qiime2-pipeline"><span class="header-section-number">5.3.2</span> QIIME2 pipeline</a></li>
+<li><a class="nav-link" href="#metaphlan-pipeline"><span class="header-section-number">5.3.3</span> MetaPhlAn pipeline</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#functional-and-metabolic-analysis-network-tools"><span class="header-section-number">5.4</span> Functional and Metabolic Analysis Network tools</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#humann-pipeline"><span class="header-section-number">5.4.1</span> HUMAnN pipeline</a></li></ul>
+</li>
+<li><a class="nav-link" href="#installing-microbiome-pipeline-using-mamba"><span class="header-section-number">5.5</span> Installing microbiome pipeline using mamba</a></li>
+<li><a class="nav-link" href="#creating-microbiome-env-from-yaml-file"><span class="header-section-number">5.6</span> Creating microbiome env from YAML file</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/tmbuza/imap-essential-software.git/blob/gh-pages/04_bioinformatics_tools.Rmd">View source <i class="fas fa-air-freshener"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/tmbuza/imap-essential-software.git/edit/gh-pages/04_bioinformatics_tools.Rmd">Edit this page <i class="fas fa-air-freshener"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 mt-3">
+        <p><strong><u><a class="text-light" href="https://microbiome.complexdatainsights.com"><big>IMAP:</big> Integrated Microbiome Analysis Pipelines</a></u></strong>: End-to-End Practical User Guides Using Integrated Approaches</p>
+<br><p>Authored by Teresia Mrema-Buza, Last updated: <b>2024-02-13</b>.</p>
+<br>
+</div>
+      <div class="col-12 col-md-6 mt-3">
+        <p>Note: This practical guide was created using the <a class="text-light" href="https://bookdown.org/yihui/bookdown/">bookdown</a> R package, styled with the modern bs4_book format.</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+</body>
+</html>
