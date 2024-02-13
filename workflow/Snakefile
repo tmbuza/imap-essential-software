@@ -1,0 +1,85 @@
+from snakemake.utils import min_version
+
+min_version("6.10.0")
+
+# Configuration file containing all user-specified settings
+configfile: "config/config.yml"
+
+required_tools = [f'{tool}.Rmd' for tool in config["basictools"]]
+explore_viz = [f'{tool}.Rmd' for tool in config["exploreviz"]]
+qc_tools = [f'{tool}.Rmd' for tool in config["qctools"]]
+bioinfo_tools = [f'{tool}.Rmd' for tool in config["bioinfotools"]]
+env_pkg_mgt = [f'{tool}.Rmd' for tool in config["envpkgmgt"]]
+wkflow_mgt = [f'{tool}.Rmd' for tool in config["workflowmgt"]]
+version_ctrl = [f'{tool}.Rmd' for tool in config["versionctrl"]]
+
+
+report: "report/workflow.rst"
+
+include: "rules/rmd_report.smk"
+
+rule all:
+    input: 
+        expand("software/toolcategory/{prefix}.Rmd", prefix=config["basictools"]),
+        expand("software/edatools/{prefix}.Rmd", prefix=config["exploreviz"]),
+        expand("software/qctools/{prefix}.Rmd", prefix=config["qctools"]),
+        expand("software/bioinftools/{prefix}.Rmd", prefix=config["bioinfotools"]),
+        expand("software/envpkgsys/{prefix}.Rmd", prefix=config["envpkgmgt"]),
+        expand("software/smktools/{prefix}.Rmd", prefix=config["workflowmgt"]),
+        expand("software/verctltools/{prefix}.Rmd", prefix=config["versionctrl"]),
+        "index.html",
+        "dags/rulegraph.png",
+        "dags/rulegraph.svg"
+    output: 
+        "software/alltools/required_tools.Rmd", 
+    shell: 
+        "cat {input} > {output}"
+
+
+rule required_tools_category: 
+    output: 
+        "software/toolcategory/{prefix}.Rmd"
+    shell: 
+        "echo {wildcards.prefix} > {output}"
+
+
+rule data_exploration_tools: 
+    output: 
+        "software/edatools/{prefix}.Rmd"
+    shell: 
+        "echo {wildcards.prefix} > {output}"
+
+
+rule quality_control_tools:  
+    output: 
+        "software/qctools/{prefix}.Rmd"
+    shell: 
+        "echo {wildcards.prefix} > {output}"
+
+
+rule microbial_profiling_tools:  
+    output: 
+        "software/bioinftools/{prefix}.Rmd"
+    shell: 
+        "echo {wildcards.prefix} > {output}"
+
+
+rule env_pkg_management_sys:  
+    output: 
+        "software/envpkgsys/{prefix}.Rmd"
+    shell: 
+        "echo {wildcards.prefix} > {output}"
+
+
+rule workflow_management_sys:  
+    output: 
+        "software/smktools/{prefix}.Rmd"
+    shell: 
+        "echo {wildcards.prefix} > {output}"
+
+
+rule version_control_sys:  
+    output: 
+        "software/verctltools/{prefix}.Rmd"
+    shell: 
+        "echo {wildcards.prefix} > {output}"

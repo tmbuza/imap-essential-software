@@ -1,1 +1,1 @@
-IMAP Essential Software
+# Software for Microbiome Data Analysis
