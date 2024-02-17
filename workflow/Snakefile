@@ -124,7 +124,7 @@ rule version_control_sys:
     shell: 
         "echo {wildcards.prefix} > {output}"
 
-rule report_in_ghpages:
+rule render_bs4_book:
     input:
         "index.Rmd",
         expand("software/toolcategory/{prefix}.Rmd", prefix=config["basictools"]),
