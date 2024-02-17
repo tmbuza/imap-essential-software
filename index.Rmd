@@ -59,7 +59,8 @@ source("_common.R")
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 
-# <big>Microbiome Data Analysis Toolkit</big> {-#analysis-toolkit}
+
+# <u>IMAP-Part 1</u>: Essential Toolkit {-#analysis-toolkit}
 
 <br>
 <br>

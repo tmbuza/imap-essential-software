@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>B Session Information | IMAP: Integrated Microbiome Analysis Pipelines</title>
+<title>C Session Information | IMAP: Integrated Microbiome Analysis Pipelines</title>
 <meta name="author" content="Teresia Mrema-Buza">
 <meta name="description" content="Reproducibility relies on the ability to precisely recreate the working environment, and session information serves as a vital reference to achieve this consistency. Here we record details about...">
 <meta name="generator" content="bookdown 0.37 with bs4_book()">
-<meta property="og:title" content="B Session Information | IMAP: Integrated Microbiome Analysis Pipelines">
+<meta property="og:title" content="C Session Information | IMAP: Integrated Microbiome Analysis Pipelines">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://tmbuza.github.io/imap-essential-software/session-information.html">
 <meta property="og:image" content="https://tmbuza.github.io/imap-essential-software/images/planning.png">
 <meta property="og:description" content="Reproducibility relies on the ability to precisely recreate the working environment, and session information serves as a vital reference to achieve this consistency. Here we record details about...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="B Session Information | IMAP: Integrated Microbiome Analysis Pipelines">
+<meta name="twitter:title" content="C Session Information | IMAP: Integrated Microbiome Analysis Pipelines">
 <meta name="twitter:description" content="Reproducibility relies on the ability to precisely recreate the working environment, and session information serves as a vital reference to achieve this consistency. Here we record details about...">
 <meta name="twitter:image" content="https://tmbuza.github.io/imap-essential-software/images/planning.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -73,7 +73,7 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">Microbiome Data Analysis Toolkit</a></li>
+<li><a class="" href="index.html">IMAP-Part 1: Essential Toolkit</a></li>
 <li class="book-part">SOFTWARE CATEGORIES</li>
 <li><a class="" href="types-of-essential-software.html"><span class="header-section-number">1</span> Types of Essential Software</a></li>
 <li><a class="" href="environment-management-system.html"><span class="header-section-number">2</span> Environment Management System</a></li>
@@ -82,7 +82,8 @@
 <li><a class="" href="microbiome-bioinformatics-tools.html"><span class="header-section-number">5</span> Microbiome Bioinformatics Tools</a></li>
 <li class="book-part">APPENDIX</li>
 <li><a class="" href="imap-github-repos.html"><span class="header-section-number">A</span> IMAP GitHub Repos</a></li>
-<li><a class="active" href="session-information.html"><span class="header-section-number">B</span> Session Information</a></li>
+<li><a class="" href="essential-software-rulegraph.html"><span class="header-section-number">B</span> Essential Software Rulegraph</a></li>
+<li><a class="active" href="session-information.html"><span class="header-section-number">C</span> Session Information</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -91,12 +92,12 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="session-information" class="section level1" number="7">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="session-information" class="section level1" number="8">
 <h1>
-<span class="header-section-number">B</span> Session Information<a class="anchor" aria-label="anchor" href="#session-information"><i class="fas fa-link"></i></a>
+<span class="header-section-number">C</span> Session Information<a class="anchor" aria-label="anchor" href="#session-information"><i class="fas fa-link"></i></a>
 </h1>
 <p>Reproducibility relies on the ability to precisely recreate the working environment, and session information serves as a vital reference to achieve this consistency. Here we record details about the R environment, package versions, and system settings of the computing environment at the time of analysis.</p>
-<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-lib/sessioninfo#readme">sessioninfo</a></span><span class="op">)</span></span>
 <span></span>
@@ -109,18 +110,67 @@
 <span><span class="op">}</span></span>
 <span></span>
 <span><span class="co"># Save the session information to a text file without line numbers</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="va">info</span>, file <span class="op">=</span> <span class="st">"resources/session_info.txt"</span>, sep <span class="op">=</span> <span class="st">"\n"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="va">info</span>, file <span class="op">=</span> <span class="st">"resources/session_info.txt"</span>, sep <span class="op">=</span> <span class="st">"\n"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">info</span></span></code></pre></div>
+<pre><code>##  [1] "─ Session info ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────"
+##  [2] " setting  value"                                                                                                                                          
+##  [3] " version  R version 4.3.2 (2023-10-31)"                                                                                                                   
+##  [4] " os       macOS Sonoma 14.2.1"                                                                                                                            
+##  [5] " system   aarch64, darwin20.0.0"                                                                                                                          
+##  [6] " ui       unknown"                                                                                                                                        
+##  [7] " language (EN)"                                                                                                                                           
+##  [8] " collate  en_US.UTF-8"                                                                                                                                    
+##  [9] " ctype    en_US.UTF-8"                                                                                                                                    
+## [10] " tz       Africa/Dar_es_Salaam"                                                                                                                           
+## [11] " date     2024-02-17"                                                                                                                                     
+## [12] " pandoc   3.1.3 @ /Users/tmbmacbookair/miniforge3/envs/microbiome_env/bin/ (via rmarkdown)"                                                               
+## [13] ""                                                                                                                                                         
+## [14] "─ Packages ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────"
+## [15] " ! package     * version date (UTC) lib source"                                                                                                           
+## [16] " P bookdown      0.37    2023-12-01 [?] CRAN (R 4.3.2)"                                                                                                   
+## [17] " P bslib         0.6.1   2023-11-28 [?] CRAN (R 4.3.2)"                                                                                                   
+## [18] " P cachem        1.0.8   2023-05-01 [?] CRAN (R 4.3.2)"                                                                                                   
+## [19] " P cli           3.6.2   2023-12-11 [?] CRAN (R 4.3.2)"                                                                                                   
+## [20] " P digest        0.6.34  2024-01-11 [?] CRAN (R 4.3.2)"                                                                                                   
+## [21] " P downlit       0.4.3   2023-06-29 [?] CRAN (R 4.3.2)"                                                                                                   
+## [22] " P evaluate      0.23    2023-11-01 [?] CRAN (R 4.3.2)"                                                                                                   
+## [23] " P fastmap       1.1.1   2023-02-24 [?] CRAN (R 4.3.2)"                                                                                                   
+## [24] " P fs            1.6.3   2023-07-20 [?] CRAN (R 4.3.2)"                                                                                                   
+## [25] " P htmltools     0.5.7   2023-11-03 [?] CRAN (R 4.3.2)"                                                                                                   
+## [26] " P jquerylib     0.1.4   2021-04-26 [?] CRAN (R 4.3.2)"                                                                                                   
+## [27] " P jsonlite      1.8.8   2023-12-04 [?] CRAN (R 4.3.2)"                                                                                                   
+## [28] " P knitr       * 1.45    2023-10-30 [?] CRAN (R 4.3.2)"                                                                                                   
+## [29] " P lifecycle     1.0.4   2023-11-07 [?] CRAN (R 4.3.2)"                                                                                                   
+## [30] " P memoise       2.0.1   2021-11-26 [?] CRAN (R 4.3.2)"                                                                                                   
+## [31] " P R6            2.5.1   2021-08-19 [?] CRAN (R 4.3.2)"                                                                                                   
+## [32] "   renv          1.0.3   2023-09-19 [1] CRAN (R 4.3.1)"                                                                                                   
+## [33] " P rlang         1.1.3   2024-01-10 [?] CRAN (R 4.3.2)"                                                                                                   
+## [34] " P rmarkdown     2.25    2023-09-18 [?] CRAN (R 4.3.2)"                                                                                                   
+## [35] " P sass          0.4.8   2023-12-06 [?] CRAN (R 4.3.2)"                                                                                                   
+## [36] " P sessioninfo * 1.2.2   2021-12-06 [?] CRAN (R 4.3.2)"                                                                                                   
+## [37] " P withr         3.0.0   2024-01-16 [?] CRAN (R 4.3.2)"                                                                                                   
+## [38] " P xfun          0.42    2024-02-08 [?] CRAN (R 4.3.2)"                                                                                                   
+## [39] " P xml2          1.3.6   2023-12-04 [?] CRAN (R 4.3.2)"                                                                                                   
+## [40] " P yaml          2.3.8   2023-12-11 [?] CRAN (R 4.3.2)"                                                                                                   
+## [41] ""                                                                                                                                                         
+## [42] " [1] /Users/tmbmacbookair/Dropbox/2024/TMB2024/COMPLETED/imap-essential-software/renv/library/R-4.3/aarch64-apple-darwin20.0.0"                           
+## [43] " [2] /Users/tmbmacbookair/Library/Caches/org.R-project.R/R/renv/sandbox/R-4.3/aarch64-apple-darwin20.0.0/c637371f"                                        
+## [44] ""                                                                                                                                                         
+## [45] " P ── Loaded and on-disk path mismatch."                                                                                                                  
+## [46] ""                                                                                                                                                         
+## [47] "─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────"</code></pre>
 <blockquote>
 <p>For a detailed overview of the tools and versions suitable for this guide, I encourage you to explore the session information saved in the accompanying text file named <code>resources/session_info.txt</code>,</p>
 </blockquote>
 
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="imap-github-repos.html"><span class="header-section-number">A</span> IMAP GitHub Repos</a></div>
+<div class="prev"><a href="essential-software-rulegraph.html"><span class="header-section-number">B</span> Essential Software Rulegraph</a></div>
 <div class="next"><a href="references.html">References</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#session-information"><span class="header-section-number">B</span> Session Information</a></li></ul>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#session-information"><span class="header-section-number">C</span> Session Information</a></li></ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
@@ -138,7 +188,7 @@
     <div class="row">
       <div class="col-12 col-md-6 mt-3">
         <p><strong><u><a class="text-light" href="https://microbiome.complexdatainsights.com"><big>IMAP:</big> Integrated Microbiome Analysis Pipelines</a></u></strong>: End-to-End Practical User Guides Using Integrated Approaches</p>
-<br><p>Authored by Teresia Mrema-Buza, Last updated: <b>2024-02-13</b>.</p>
+<br><p>Authored by Teresia Mrema-Buza, Last updated: <b>2024-02-17</b>.</p>
 <br>
 </div>
       <div class="col-12 col-md-6 mt-3">

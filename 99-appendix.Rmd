@@ -18,10 +18,11 @@
 | [IMAP-SUMMARY](https://github.com/tmbuza/imap-snakemake-workflows/) | Summary of snakemake workflows for microbiome data analysis | [In-progress](https://tmbuza.github.io/imap-snakemake-workflows/) |
 ```
 
-
-# Snakemake Rule Graph: IMAP-PART 01
+# Essential Software Rulegraph
 
 ![](dags/rulegraph.svg)
+
+This rule graph serves as a valuable reference, providing insights into the essential software required to initiate microbiome data analysis pipelines.
 
 
 # Session Information
@@ -42,7 +43,11 @@ if (!dir.exists("resources")) {
 
 # Save the session information to a text file without line numbers
 cat(info, file = "resources/session_info.txt", sep = "\n")
+
+info
+
 ```
+
 
 > For a detailed overview of the tools and versions suitable for this guide, I encourage you to explore the session information saved in the accompanying text file named `resources/session_info.txt`,
 

@@ -73,7 +73,7 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">Microbiome Data Analysis Toolkit</a></li>
+<li><a class="" href="index.html">IMAP-Part 1: Essential Toolkit</a></li>
 <li class="book-part">SOFTWARE CATEGORIES</li>
 <li><a class="" href="types-of-essential-software.html"><span class="header-section-number">1</span> Types of Essential Software</a></li>
 <li><a class="" href="environment-management-system.html"><span class="header-section-number">2</span> Environment Management System</a></li>
@@ -82,7 +82,8 @@
 <li><a class="" href="microbiome-bioinformatics-tools.html"><span class="header-section-number">5</span> Microbiome Bioinformatics Tools</a></li>
 <li class="book-part">APPENDIX</li>
 <li><a class="" href="imap-github-repos.html"><span class="header-section-number">A</span> IMAP GitHub Repos</a></li>
-<li><a class="" href="session-information.html"><span class="header-section-number">B</span> Session Information</a></li>
+<li><a class="" href="essential-software-rulegraph.html"><span class="header-section-number">B</span> Essential Software Rulegraph</a></li>
+<li><a class="" href="session-information.html"><span class="header-section-number">C</span> Session Information</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -103,7 +104,7 @@
 <li>Snakemake<span class="citation"><sup>[1]</sup></span> software is best installed via the Mamba package manager or Mambaforge.</li>
 <li>We first need to confirm if conda or mamba are installed and proceed from there.</li>
 </ul>
-<div class="sourceCode" id="cb21"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="snakemake-workflow-management-system.html#cb21-1" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda snakemake</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="snakemake-workflow-management-system.html#cb22-1" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda snakemake</span></code></pre></div>
 </div>
 <div id="install-snakemake-minimal" class="section level2" number="3.2">
 <h2>
@@ -124,22 +125,22 @@
 <ul>
 <li>Snakedeploy<span class="citation"><sup>[2]</sup></span> deploys a snakemake pipeline from version control like GitHub.</li>
 </ul>
-<div class="sourceCode" id="cb24"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="snakemake-workflow-management-system.html#cb24-1" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda snakedeploy</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="snakemake-workflow-management-system.html#cb25-1" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda snakedeploy</span></code></pre></div>
 </div>
 <div id="installing-using-environment.yml" class="section level2" number="3.5">
 <h2>
 <span class="header-section-number">3.5</span> Installing using <code>environment.yml</code><a class="anchor" aria-label="anchor" href="#installing-using-environment.yml"><i class="fas fa-link"></i></a>
 </h2>
-<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="snakemake-workflow-management-system.html#cb25-1" tabindex="-1"></a><span class="ex">name:</span> snakemake</span>
-<span id="cb25-2"><a href="snakemake-workflow-management-system.html#cb25-2" tabindex="-1"></a><span class="ex">channels:</span></span>
-<span id="cb25-3"><a href="snakemake-workflow-management-system.html#cb25-3" tabindex="-1"></a>    <span class="ex">-</span> bioconda</span>
-<span id="cb25-4"><a href="snakemake-workflow-management-system.html#cb25-4" tabindex="-1"></a><span class="ex">dependencies:</span></span>
-<span id="cb25-5"><a href="snakemake-workflow-management-system.html#cb25-5" tabindex="-1"></a>    <span class="ex">-</span> snakemake =7.19.1</span>
-<span id="cb25-6"><a href="snakemake-workflow-management-system.html#cb25-6" tabindex="-1"></a>    <span class="ex">-</span> snakemake-minimal =7.19.1</span>
-<span id="cb25-7"><a href="snakemake-workflow-management-system.html#cb25-7" tabindex="-1"></a>    <span class="ex">-</span> snakedeploy =0.8.6</span>
-<span id="cb25-8"><a href="snakemake-workflow-management-system.html#cb25-8" tabindex="-1"></a>    <span class="ex">-</span> snakemake-wrapper-utils =0.5.0</span></code></pre></div>
-<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="snakemake-workflow-management-system.html#cb26-1" tabindex="-1"></a><span class="ex">conda</span> activate base</span>
-<span id="cb26-2"><a href="snakemake-workflow-management-system.html#cb26-2" tabindex="-1"></a><span class="ex">mamba</span> env create <span class="at">--name</span> snakemake <span class="at">--file</span> environment.yaml</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="snakemake-workflow-management-system.html#cb26-1" tabindex="-1"></a><span class="ex">name:</span> snakemake</span>
+<span id="cb26-2"><a href="snakemake-workflow-management-system.html#cb26-2" tabindex="-1"></a><span class="ex">channels:</span></span>
+<span id="cb26-3"><a href="snakemake-workflow-management-system.html#cb26-3" tabindex="-1"></a>    <span class="ex">-</span> bioconda</span>
+<span id="cb26-4"><a href="snakemake-workflow-management-system.html#cb26-4" tabindex="-1"></a><span class="ex">dependencies:</span></span>
+<span id="cb26-5"><a href="snakemake-workflow-management-system.html#cb26-5" tabindex="-1"></a>    <span class="ex">-</span> snakemake =7.19.1</span>
+<span id="cb26-6"><a href="snakemake-workflow-management-system.html#cb26-6" tabindex="-1"></a>    <span class="ex">-</span> snakemake-minimal =7.19.1</span>
+<span id="cb26-7"><a href="snakemake-workflow-management-system.html#cb26-7" tabindex="-1"></a>    <span class="ex">-</span> snakedeploy =0.8.6</span>
+<span id="cb26-8"><a href="snakemake-workflow-management-system.html#cb26-8" tabindex="-1"></a>    <span class="ex">-</span> snakemake-wrapper-utils =0.5.0</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="snakemake-workflow-management-system.html#cb27-1" tabindex="-1"></a><span class="ex">conda</span> activate base</span>
+<span id="cb27-2"><a href="snakemake-workflow-management-system.html#cb27-2" tabindex="-1"></a><span class="ex">mamba</span> env create <span class="at">--name</span> snakemake <span class="at">--file</span> environment.yaml</span></code></pre></div>
 
 </div>
 </div>
@@ -173,7 +174,7 @@
     <div class="row">
       <div class="col-12 col-md-6 mt-3">
         <p><strong><u><a class="text-light" href="https://microbiome.complexdatainsights.com"><big>IMAP:</big> Integrated Microbiome Analysis Pipelines</a></u></strong>: End-to-End Practical User Guides Using Integrated Approaches</p>
-<br><p>Authored by Teresia Mrema-Buza, Last updated: <b>2024-02-13</b>.</p>
+<br><p>Authored by Teresia Mrema-Buza, Last updated: <b>2024-02-17</b>.</p>
 <br>
 </div>
       <div class="col-12 col-md-6 mt-3">

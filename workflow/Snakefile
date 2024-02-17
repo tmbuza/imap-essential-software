@@ -5,6 +5,10 @@ min_version("6.10.0")
 # Configuration file containing all user-specified settings
 configfile: "config/config.yml"
 
+# # Debug information
+# print("Configuration:")
+# print(config)
+
 required_tools = [f'{tool}.Rmd' for tool in config["basictools"]]
 explore_viz = [f'{tool}.Rmd' for tool in config["exploreviz"]]
 qc_tools = [f'{tool}.Rmd' for tool in config["qctools"]]
@@ -16,25 +20,61 @@ version_ctrl = [f'{tool}.Rmd' for tool in config["versionctrl"]]
 
 report: "report/workflow.rst"
 
-include: "rules/rmd_report.smk"
-
-rule all:
+rule FINAL_TARGET:
     input: 
-        expand("software/toolcategory/{prefix}.Rmd", prefix=config["basictools"]),
-        expand("software/edatools/{prefix}.Rmd", prefix=config["exploreviz"]),
-        expand("software/qctools/{prefix}.Rmd", prefix=config["qctools"]),
-        expand("software/bioinftools/{prefix}.Rmd", prefix=config["bioinfotools"]),
-        expand("software/envpkgsys/{prefix}.Rmd", prefix=config["envpkgmgt"]),
-        expand("software/smktools/{prefix}.Rmd", prefix=config["workflowmgt"]),
-        expand("software/verctltools/{prefix}.Rmd", prefix=config["versionctrl"]),
-        "index.html",
-        "dags/rulegraph.png",
-        "dags/rulegraph.svg"
+        "docs/index.html"
+        # expand("software/toolcategory/{prefix}.Rmd", prefix=config["basictools"]),
+        # expand("software/edatools/{prefix}.Rmd", prefix=config["exploreviz"]),
+        # expand("software/qctools/{prefix}.Rmd", prefix=config["qctools"]),
+        # expand("software/bioinftools/{prefix}.Rmd", prefix=config["bioinfotools"]),
+        # expand("software/envpkgsys/{prefix}.Rmd", prefix=config["envpkgmgt"]),
+        # expand("software/smktools/{prefix}.Rmd", prefix=config["workflowmgt"]),
+        # expand("software/verctltools/{prefix}.Rmd", prefix=config["versionctrl"]),
+        # "reports/snakemake_report.html",
+        # "reports/project_tree.txt",
+        # "dags/rulegraph.png",
+        # "dags/rulegraph.svg", 
+
     output: 
         "software/alltools/required_tools.Rmd", 
     shell: 
         "cat {input} > {output}"
 
+
+# Rule to generate the rule graph and create the dags folder if it doesn't exist
+rule generate_rulegraph:
+    output:
+        directory("dags"),
+        "dags/rulegraph.png",
+        "dags/rulegraph.svg",
+
+    shell:
+        """
+        snakemake --unlock;
+        mkdir -p {output[0]};
+        snakemake --rulegraph | dot -Tpng > {output[1]};
+        snakemake --rulegraph | dot -Tsvg > {output[2]};
+        """
+
+# Rule to generate a directory tree
+rule generate_tree:
+    output:
+        directory("output"),
+        "reports/project_tree.txt"
+    shell:
+        """
+        snakemake --unlock \
+        && mkdir -p {output[0]} \
+        && echo "Project Tree" > {output[1]} \
+        && tree -L 2 . >> {output[1]}
+        """
+
+# Rule to generate SnakeMake report
+rule snakemake_report:
+    output:
+        "reports/snakemake_report.html"
+    shell:
+        "snakemake --keep-going --use-conda --report {output[0]}"
 
 rule required_tools_category: 
     output: 
@@ -83,3 +123,22 @@ rule version_control_sys:
         "software/verctltools/{prefix}.Rmd"
     shell: 
         "echo {wildcards.prefix} > {output}"
+
+rule report_in_ghpages:
+    input:
+        "index.Rmd",
+        expand("software/toolcategory/{prefix}.Rmd", prefix=config["basictools"]),
+        expand("software/edatools/{prefix}.Rmd", prefix=config["exploreviz"]),
+        expand("software/qctools/{prefix}.Rmd", prefix=config["qctools"]),
+        expand("software/bioinftools/{prefix}.Rmd", prefix=config["bioinfotools"]),
+        expand("software/envpkgsys/{prefix}.Rmd", prefix=config["envpkgmgt"]),
+        expand("software/smktools/{prefix}.Rmd", prefix=config["workflowmgt"]),
+        expand("software/verctltools/{prefix}.Rmd", prefix=config["versionctrl"]),
+        "reports/snakemake_report.html",
+        "reports/project_tree.txt",
+        "dags/rulegraph.png",
+        "dags/rulegraph.svg", 
+    output:
+        "docs/index.html"
+    shell:
+        "R -e 'bookdown::render_book(input = \"index.Rmd\", output_format = \"bookdown::bs4_book\", output_dir = \"docs\")'"

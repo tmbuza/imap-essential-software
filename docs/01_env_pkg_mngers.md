@@ -102,6 +102,12 @@ conda list --explicit > env_spec_file.txt
 conda create --name new_env --file env_spec_file.txt
 ```
 
+### Updating existing environment
+To update the packages in the existing environment e.g. named my_environment, you can run:
+```bash
+conda env update -n my_environment -f environment.yml
+```
+
 ### Installing packages from a spec file
 ```bash
 conda install --name existing_env --file env_spec_file.txt

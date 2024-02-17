@@ -73,7 +73,7 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">Microbiome Data Analysis Toolkit</a></li>
+<li><a class="" href="index.html">IMAP-Part 1: Essential Toolkit</a></li>
 <li class="book-part">SOFTWARE CATEGORIES</li>
 <li><a class="" href="types-of-essential-software.html"><span class="header-section-number">1</span> Types of Essential Software</a></li>
 <li><a class="" href="environment-management-system.html"><span class="header-section-number">2</span> Environment Management System</a></li>
@@ -82,7 +82,8 @@
 <li><a class="active" href="microbiome-bioinformatics-tools.html"><span class="header-section-number">5</span> Microbiome Bioinformatics Tools</a></li>
 <li class="book-part">APPENDIX</li>
 <li><a class="" href="imap-github-repos.html"><span class="header-section-number">A</span> IMAP GitHub Repos</a></li>
-<li><a class="" href="session-information.html"><span class="header-section-number">B</span> Session Information</a></li>
+<li><a class="" href="essential-software-rulegraph.html"><span class="header-section-number">B</span> Essential Software Rulegraph</a></li>
+<li><a class="" href="session-information.html"><span class="header-section-number">C</span> Session Information</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -124,13 +125,13 @@
 <span class="header-section-number">5.1.1</span> Installing using conda or mamba<a class="anchor" aria-label="anchor" href="#installing-using-conda-or-mamba"><i class="fas fa-link"></i></a>
 </h3>
 <p>Direct installation of the bioinformatics tools is much easier using the conda or mamba package management system.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="microbiome-bioinformatics-tools.html#cb30-1" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda seqkit</span>
-<span id="cb30-2"><a href="microbiome-bioinformatics-tools.html#cb30-2" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda fastqc</span>
-<span id="cb30-3"><a href="microbiome-bioinformatics-tools.html#cb30-3" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda multiqc</span>
-<span id="cb30-4"><a href="microbiome-bioinformatics-tools.html#cb30-4" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda bbmap</span>
-<span id="cb30-5"><a href="microbiome-bioinformatics-tools.html#cb30-5" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda trimmommatic</span>
-<span id="cb30-6"><a href="microbiome-bioinformatics-tools.html#cb30-6" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda kneaddata</span>
-<span id="cb30-7"><a href="microbiome-bioinformatics-tools.html#cb30-7" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> biobakery kneaddata</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb31-1"><a href="microbiome-bioinformatics-tools.html#cb31-1" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda seqkit</span>
+<span id="cb31-2"><a href="microbiome-bioinformatics-tools.html#cb31-2" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda fastqc</span>
+<span id="cb31-3"><a href="microbiome-bioinformatics-tools.html#cb31-3" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda multiqc</span>
+<span id="cb31-4"><a href="microbiome-bioinformatics-tools.html#cb31-4" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda bbmap</span>
+<span id="cb31-5"><a href="microbiome-bioinformatics-tools.html#cb31-5" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda trimmommatic</span>
+<span id="cb31-6"><a href="microbiome-bioinformatics-tools.html#cb31-6" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda kneaddata</span>
+<span id="cb31-7"><a href="microbiome-bioinformatics-tools.html#cb31-7" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> biobakery kneaddata</span></code></pre></div>
 <p><br></p>
 </div>
 </div>
@@ -139,19 +140,19 @@
 <span class="header-section-number">5.2</span> Creating <code>readqc</code> env from YAML file<a class="anchor" aria-label="anchor" href="#creating-readqc-env-from-yaml-file"><i class="fas fa-link"></i></a>
 </h2>
 <p><em>Filename: environment.yml</em></p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb31-1"><a href="microbiome-bioinformatics-tools.html#cb31-1" tabindex="-1"></a><span class="ex">name:</span> readqc</span>
-<span id="cb31-2"><a href="microbiome-bioinformatics-tools.html#cb31-2" tabindex="-1"></a><span class="ex">channels:</span></span>
-<span id="cb31-3"><a href="microbiome-bioinformatics-tools.html#cb31-3" tabindex="-1"></a>    <span class="ex">-</span> bioconda</span>
-<span id="cb31-4"><a href="microbiome-bioinformatics-tools.html#cb31-4" tabindex="-1"></a>    <span class="ex">-</span> biobakery</span>
-<span id="cb31-5"><a href="microbiome-bioinformatics-tools.html#cb31-5" tabindex="-1"></a><span class="ex">dependencies:</span></span>
-<span id="cb31-6"><a href="microbiome-bioinformatics-tools.html#cb31-6" tabindex="-1"></a>    <span class="ex">-</span> seqkit =2.3.1</span>
-<span id="cb31-7"><a href="microbiome-bioinformatics-tools.html#cb31-7" tabindex="-1"></a>    <span class="ex">-</span> fastqc =0.12.1</span>
-<span id="cb31-8"><a href="microbiome-bioinformatics-tools.html#cb31-8" tabindex="-1"></a>    <span class="ex">-</span> bbmap =39.01</span>
-<span id="cb31-9"><a href="microbiome-bioinformatics-tools.html#cb31-9" tabindex="-1"></a>    <span class="ex">-</span> multiqc =1.14</span>
-<span id="cb31-10"><a href="microbiome-bioinformatics-tools.html#cb31-10" tabindex="-1"></a>    <span class="ex">-</span> trimmomatic =0.39</span>
-<span id="cb31-11"><a href="microbiome-bioinformatics-tools.html#cb31-11" tabindex="-1"></a>    <span class="ex">-</span> knead-data =0.12.0</span></code></pre></div>
-<div class="sourceCode" id="cb32"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="microbiome-bioinformatics-tools.html#cb32-1" tabindex="-1"></a><span class="ex">conda</span> activate base</span>
-<span id="cb32-2"><a href="microbiome-bioinformatics-tools.html#cb32-2" tabindex="-1"></a><span class="ex">mamba</span> env create <span class="at">--name</span> readqc <span class="at">--file</span> environment.yaml</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="microbiome-bioinformatics-tools.html#cb32-1" tabindex="-1"></a><span class="ex">name:</span> readqc</span>
+<span id="cb32-2"><a href="microbiome-bioinformatics-tools.html#cb32-2" tabindex="-1"></a><span class="ex">channels:</span></span>
+<span id="cb32-3"><a href="microbiome-bioinformatics-tools.html#cb32-3" tabindex="-1"></a>    <span class="ex">-</span> bioconda</span>
+<span id="cb32-4"><a href="microbiome-bioinformatics-tools.html#cb32-4" tabindex="-1"></a>    <span class="ex">-</span> biobakery</span>
+<span id="cb32-5"><a href="microbiome-bioinformatics-tools.html#cb32-5" tabindex="-1"></a><span class="ex">dependencies:</span></span>
+<span id="cb32-6"><a href="microbiome-bioinformatics-tools.html#cb32-6" tabindex="-1"></a>    <span class="ex">-</span> seqkit =2.3.1</span>
+<span id="cb32-7"><a href="microbiome-bioinformatics-tools.html#cb32-7" tabindex="-1"></a>    <span class="ex">-</span> fastqc =0.12.1</span>
+<span id="cb32-8"><a href="microbiome-bioinformatics-tools.html#cb32-8" tabindex="-1"></a>    <span class="ex">-</span> bbmap =39.01</span>
+<span id="cb32-9"><a href="microbiome-bioinformatics-tools.html#cb32-9" tabindex="-1"></a>    <span class="ex">-</span> multiqc =1.14</span>
+<span id="cb32-10"><a href="microbiome-bioinformatics-tools.html#cb32-10" tabindex="-1"></a>    <span class="ex">-</span> trimmomatic =0.39</span>
+<span id="cb32-11"><a href="microbiome-bioinformatics-tools.html#cb32-11" tabindex="-1"></a>    <span class="ex">-</span> knead-data =0.12.0</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="microbiome-bioinformatics-tools.html#cb33-1" tabindex="-1"></a><span class="ex">conda</span> activate base</span>
+<span id="cb33-2"><a href="microbiome-bioinformatics-tools.html#cb33-2" tabindex="-1"></a><span class="ex">mamba</span> env create <span class="at">--name</span> readqc <span class="at">--file</span> environment.yaml</span></code></pre></div>
 </div>
 <div id="microbial-composition-profiling-tools" class="section level2" number="5.3">
 <h2>
@@ -210,11 +211,11 @@
 <span class="header-section-number">5.5</span> Installing microbiome pipeline using mamba<a class="anchor" aria-label="anchor" href="#installing-microbiome-pipeline-using-mamba"><i class="fas fa-link"></i></a>
 </h2>
 <p>Using a conda or mamba package management system is much easier to install bioinformatics tools.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="microbiome-bioinformatics-tools.html#cb33-1" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda mothur</span>
-<span id="cb33-2"><a href="microbiome-bioinformatics-tools.html#cb33-2" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> qiime2 qiime2</span>
-<span id="cb33-3"><a href="microbiome-bioinformatics-tools.html#cb33-3" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda metaphors</span>
-<span id="cb33-4"><a href="microbiome-bioinformatics-tools.html#cb33-4" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> biobakery humann</span>
-<span id="cb33-5"><a href="microbiome-bioinformatics-tools.html#cb33-5" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda humann</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="microbiome-bioinformatics-tools.html#cb34-1" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda mothur</span>
+<span id="cb34-2"><a href="microbiome-bioinformatics-tools.html#cb34-2" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> qiime2 qiime2</span>
+<span id="cb34-3"><a href="microbiome-bioinformatics-tools.html#cb34-3" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda metaphors</span>
+<span id="cb34-4"><a href="microbiome-bioinformatics-tools.html#cb34-4" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> biobakery humann</span>
+<span id="cb34-5"><a href="microbiome-bioinformatics-tools.html#cb34-5" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda humann</span></code></pre></div>
 <p><br></p>
 </div>
 <div id="creating-microbiome-env-from-yaml-file" class="section level2" number="5.6">
@@ -222,18 +223,18 @@
 <span class="header-section-number">5.6</span> Creating <code>microbiome</code> env from YAML file<a class="anchor" aria-label="anchor" href="#creating-microbiome-env-from-yaml-file"><i class="fas fa-link"></i></a>
 </h2>
 <p>Filename: environment.yml</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="microbiome-bioinformatics-tools.html#cb34-1" tabindex="-1"></a><span class="ex">name:</span> microbiome</span>
-<span id="cb34-2"><a href="microbiome-bioinformatics-tools.html#cb34-2" tabindex="-1"></a><span class="ex">channels:</span></span>
-<span id="cb34-3"><a href="microbiome-bioinformatics-tools.html#cb34-3" tabindex="-1"></a>    <span class="ex">-</span> bioconda</span>
-<span id="cb34-4"><a href="microbiome-bioinformatics-tools.html#cb34-4" tabindex="-1"></a>    <span class="ex">-</span> biobakery</span>
-<span id="cb34-5"><a href="microbiome-bioinformatics-tools.html#cb34-5" tabindex="-1"></a>    <span class="ex">-</span> qiime2</span>
-<span id="cb34-6"><a href="microbiome-bioinformatics-tools.html#cb34-6" tabindex="-1"></a><span class="ex">dependencies:</span></span>
-<span id="cb34-7"><a href="microbiome-bioinformatics-tools.html#cb34-7" tabindex="-1"></a>    <span class="ex">-</span> mothur =1.48.0</span>
-<span id="cb34-8"><a href="microbiome-bioinformatics-tools.html#cb34-8" tabindex="-1"></a>    <span class="ex">-</span> qiime2 =2023.2.0</span>
-<span id="cb34-9"><a href="microbiome-bioinformatics-tools.html#cb34-9" tabindex="-1"></a>    <span class="ex">-</span> metaphor =4.0.6</span>
-<span id="cb34-10"><a href="microbiome-bioinformatics-tools.html#cb34-10" tabindex="-1"></a>    <span class="ex">-</span> humann =3.6</span></code></pre></div>
-<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="microbiome-bioinformatics-tools.html#cb35-1" tabindex="-1"></a><span class="ex">conda</span> activate base</span>
-<span id="cb35-2"><a href="microbiome-bioinformatics-tools.html#cb35-2" tabindex="-1"></a><span class="ex">mamba</span> env create <span class="at">--name</span> microbiome <span class="at">--file</span> environment.yaml</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="microbiome-bioinformatics-tools.html#cb35-1" tabindex="-1"></a><span class="ex">name:</span> microbiome</span>
+<span id="cb35-2"><a href="microbiome-bioinformatics-tools.html#cb35-2" tabindex="-1"></a><span class="ex">channels:</span></span>
+<span id="cb35-3"><a href="microbiome-bioinformatics-tools.html#cb35-3" tabindex="-1"></a>    <span class="ex">-</span> bioconda</span>
+<span id="cb35-4"><a href="microbiome-bioinformatics-tools.html#cb35-4" tabindex="-1"></a>    <span class="ex">-</span> biobakery</span>
+<span id="cb35-5"><a href="microbiome-bioinformatics-tools.html#cb35-5" tabindex="-1"></a>    <span class="ex">-</span> qiime2</span>
+<span id="cb35-6"><a href="microbiome-bioinformatics-tools.html#cb35-6" tabindex="-1"></a><span class="ex">dependencies:</span></span>
+<span id="cb35-7"><a href="microbiome-bioinformatics-tools.html#cb35-7" tabindex="-1"></a>    <span class="ex">-</span> mothur =1.48.0</span>
+<span id="cb35-8"><a href="microbiome-bioinformatics-tools.html#cb35-8" tabindex="-1"></a>    <span class="ex">-</span> qiime2 =2023.2.0</span>
+<span id="cb35-9"><a href="microbiome-bioinformatics-tools.html#cb35-9" tabindex="-1"></a>    <span class="ex">-</span> metaphor =4.0.6</span>
+<span id="cb35-10"><a href="microbiome-bioinformatics-tools.html#cb35-10" tabindex="-1"></a>    <span class="ex">-</span> humann =3.6</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="microbiome-bioinformatics-tools.html#cb36-1" tabindex="-1"></a><span class="ex">conda</span> activate base</span>
+<span id="cb36-2"><a href="microbiome-bioinformatics-tools.html#cb36-2" tabindex="-1"></a><span class="ex">mamba</span> env create <span class="at">--name</span> microbiome <span class="at">--file</span> environment.yaml</span></code></pre></div>
 
 </div>
 </div>
@@ -281,7 +282,7 @@
     <div class="row">
       <div class="col-12 col-md-6 mt-3">
         <p><strong><u><a class="text-light" href="https://microbiome.complexdatainsights.com"><big>IMAP:</big> Integrated Microbiome Analysis Pipelines</a></u></strong>: End-to-End Practical User Guides Using Integrated Approaches</p>
-<br><p>Authored by Teresia Mrema-Buza, Last updated: <b>2024-02-13</b>.</p>
+<br><p>Authored by Teresia Mrema-Buza, Last updated: <b>2024-02-17</b>.</p>
 <br>
 </div>
       <div class="col-12 col-md-6 mt-3">

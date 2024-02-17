@@ -20,6 +20,7 @@ checking-the-conda-version
 reproducing-existing-environment
 creating-an-env-spec-file
 creating-a-new-environment-from-a-spec-file
+updating-existing-environment
 installing-packages-from-a-spec-file
 creating-new-env-from-a-yaml-file
 checking-available-environments
@@ -52,4 +53,5 @@ humann-pipeline
 installing-microbiome-pipeline-using-mamba
 creating-microbiome-env-from-yaml-file
 imap-github-repos
+essential-software-rulegraph
 session-information

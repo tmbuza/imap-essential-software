@@ -73,7 +73,7 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">Microbiome Data Analysis Toolkit</a></li>
+<li><a class="" href="index.html">IMAP-Part 1: Essential Toolkit</a></li>
 <li class="book-part">SOFTWARE CATEGORIES</li>
 <li><a class="" href="types-of-essential-software.html"><span class="header-section-number">1</span> Types of Essential Software</a></li>
 <li><a class="" href="environment-management-system.html"><span class="header-section-number">2</span> Environment Management System</a></li>
@@ -82,7 +82,8 @@
 <li><a class="" href="microbiome-bioinformatics-tools.html"><span class="header-section-number">5</span> Microbiome Bioinformatics Tools</a></li>
 <li class="book-part">APPENDIX</li>
 <li><a class="" href="imap-github-repos.html"><span class="header-section-number">A</span> IMAP GitHub Repos</a></li>
-<li><a class="" href="session-information.html"><span class="header-section-number">B</span> Session Information</a></li>
+<li><a class="" href="essential-software-rulegraph.html"><span class="header-section-number">B</span> Essential Software Rulegraph</a></li>
+<li><a class="" href="session-information.html"><span class="header-section-number">C</span> Session Information</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -145,24 +146,24 @@
 </li>
 <li>Via environment and package management systems, for example <a href="https://www.practicaldatascience.org/html/setup_python.html">using conda</a> like so:</li>
 </ul>
-<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="data-science-visualization-tools.html#cb27-1" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels conda-forge</span>
-<span id="cb27-2"><a href="data-science-visualization-tools.html#cb27-2" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="data-science-visualization-tools.html#cb27-3" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--set</span> channel_priority strict</span>
-<span id="cb27-4"><a href="data-science-visualization-tools.html#cb27-4" tabindex="-1"></a></span>
-<span id="cb27-5"><a href="data-science-visualization-tools.html#cb27-5" tabindex="-1"></a><span class="ex">conda</span> install python=3.10</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="data-science-visualization-tools.html#cb28-1" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels conda-forge</span>
+<span id="cb28-2"><a href="data-science-visualization-tools.html#cb28-2" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="data-science-visualization-tools.html#cb28-3" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--set</span> channel_priority strict</span>
+<span id="cb28-4"><a href="data-science-visualization-tools.html#cb28-4" tabindex="-1"></a></span>
+<span id="cb28-5"><a href="data-science-visualization-tools.html#cb28-5" tabindex="-1"></a><span class="ex">conda</span> install python=3.10</span></code></pre></div>
 </div>
 <div id="installing-using-environment.yml-1" class="section level2" number="4.4">
 <h2>
 <span class="header-section-number">4.4</span> Installing using <code>environment.yml</code><a class="anchor" aria-label="anchor" href="#installing-using-environment.yml-1"><i class="fas fa-link"></i></a>
 </h2>
-<div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="data-science-visualization-tools.html#cb28-1" tabindex="-1"></a><span class="ex">name:</span> python</span>
-<span id="cb28-2"><a href="data-science-visualization-tools.html#cb28-2" tabindex="-1"></a><span class="ex">channels:</span></span>
-<span id="cb28-3"><a href="data-science-visualization-tools.html#cb28-3" tabindex="-1"></a>    <span class="ex">-</span> conda-forge</span>
-<span id="cb28-4"><a href="data-science-visualization-tools.html#cb28-4" tabindex="-1"></a><span class="ex">dependencies:</span></span>
-<span id="cb28-5"><a href="data-science-visualization-tools.html#cb28-5" tabindex="-1"></a>    <span class="ex">-</span> python</span>
-<span id="cb28-6"><a href="data-science-visualization-tools.html#cb28-6" tabindex="-1"></a>    <span class="ex">-</span> python-abi</span></code></pre></div>
-<div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="data-science-visualization-tools.html#cb29-1" tabindex="-1"></a><span class="ex">conda</span> activate base</span>
-<span id="cb29-2"><a href="data-science-visualization-tools.html#cb29-2" tabindex="-1"></a><span class="ex">mamba</span> env create <span class="at">--name</span> python <span class="at">--file</span> environment.yaml</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="data-science-visualization-tools.html#cb29-1" tabindex="-1"></a><span class="ex">name:</span> python</span>
+<span id="cb29-2"><a href="data-science-visualization-tools.html#cb29-2" tabindex="-1"></a><span class="ex">channels:</span></span>
+<span id="cb29-3"><a href="data-science-visualization-tools.html#cb29-3" tabindex="-1"></a>    <span class="ex">-</span> conda-forge</span>
+<span id="cb29-4"><a href="data-science-visualization-tools.html#cb29-4" tabindex="-1"></a><span class="ex">dependencies:</span></span>
+<span id="cb29-5"><a href="data-science-visualization-tools.html#cb29-5" tabindex="-1"></a>    <span class="ex">-</span> python</span>
+<span id="cb29-6"><a href="data-science-visualization-tools.html#cb29-6" tabindex="-1"></a>    <span class="ex">-</span> python-abi</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="data-science-visualization-tools.html#cb30-1" tabindex="-1"></a><span class="ex">conda</span> activate base</span>
+<span id="cb30-2"><a href="data-science-visualization-tools.html#cb30-2" tabindex="-1"></a><span class="ex">mamba</span> env create <span class="at">--name</span> python <span class="at">--file</span> environment.yaml</span></code></pre></div>
 
 </div>
 </div>
@@ -195,7 +196,7 @@
     <div class="row">
       <div class="col-12 col-md-6 mt-3">
         <p><strong><u><a class="text-light" href="https://microbiome.complexdatainsights.com"><big>IMAP:</big> Integrated Microbiome Analysis Pipelines</a></u></strong>: End-to-End Practical User Guides Using Integrated Approaches</p>
-<br><p>Authored by Teresia Mrema-Buza, Last updated: <b>2024-02-13</b>.</p>
+<br><p>Authored by Teresia Mrema-Buza, Last updated: <b>2024-02-17</b>.</p>
 <br>
 </div>
       <div class="col-12 col-md-6 mt-3">

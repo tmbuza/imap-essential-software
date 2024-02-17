@@ -1,0 +1,103 @@
+Project Tree
+.
+├── 00-preface.Rmd
+├── 01_env_pkg_mngers.Rmd
+├── 02_workflow_mngers.Rmd
+├── 03_datascience_tools.Rmd
+├── 04_bioinformatics_tools.Rmd
+├── 99-appendix.Rmd
+├── 999-references.Rmd
+├── 9999-footer.Rmd
+├── LICENSE
+├── README.md
+├── _bookdown.yml
+├── _common.R
+├── _common.yml
+├── _output.yml
+├── bioinfo_pipelines.Rmd
+├── bs4_template.html
+├── config
+│   └── config.yml
+├── dags
+│   ├── rulegraph.png
+│   └── rulegraph.svg
+├── docs
+│   ├── 00-preface.md
+│   ├── 01_env_pkg_mngers.md
+│   ├── 02_workflow_mngers.md
+│   ├── 03_datascience_tools.md
+│   ├── 04_bioinformatics_tools.md
+│   ├── 404.html
+│   ├── 99-appendix.md
+│   ├── 999-references.md
+│   ├── 9999-footer.md
+│   ├── dags
+│   ├── data-science-visualization-tools.html
+│   ├── environment-management-system.html
+│   ├── essential-software-rulegraph.html
+│   ├── images
+│   ├── imap-github-repos.html
+│   ├── imap-part-01-rulegraph.html
+│   ├── index.html
+│   ├── index.md
+│   ├── libs
+│   ├── microbiome-bioinformatics-tools.html
+│   ├── reference-keys.txt
+│   ├── references.html
+│   ├── search.json
+│   ├── session-information.html
+│   ├── snakemake-workflow-management-system.html
+│   ├── style.css
+│   └── types-of-essential-software.html
+├── essential-software.rds
+├── images
+│   ├── RStudioIDE.png
+│   ├── cicd.png
+│   ├── conda_list.png
+│   ├── imap.png
+│   ├── planning.png
+│   └── software.png
+├── imap-essential-software.Rproj
+├── index.Rmd
+├── library
+│   ├── apa.csl
+│   ├── imap.bib
+│   ├── packages.bib
+│   └── references.bib
+├── mapping_files.Rmd
+├── output
+├── preprocess_tools.Rmd
+├── project_overview.Rmd
+├── renv
+│   ├── activate.R
+│   ├── library
+│   ├── settings.json
+│   └── staging
+├── renv.lock
+├── report.html
+├── reports
+│   ├── project_tree.txt
+│   └── snakemake_report.html
+├── requirements.txt
+├── resources
+│   └── session_info.txt
+├── sequencing_data.Rmd
+├── software
+│   ├── alltools
+│   ├── bioinftools
+│   ├── edatools
+│   ├── envpkgsys
+│   ├── qctools
+│   ├── smktools
+│   ├── toolcategory
+│   └── verctltools
+├── software.Rmd
+├── style.css
+└── workflow
+    ├── Snakefile
+    ├── envs
+    ├── report
+    ├── rules
+    └── scripts
+
+29 directories, 71 files
