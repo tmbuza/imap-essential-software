@@ -84,6 +84,35 @@ mamba install -c biobakery humann
 mamba install -c bioconda humann
 ```
 
+
+## Demo installing MetaPhlAn and HUMAnN
+- We will demonstrate how to create a new environment named `biobakery3` and install MetaPhlAn and HUMAnN pipelines.
+
+```{block, type="tmbinfo", echo=T}
+Note: When installing HUMAnN e.g using `conda` it will also automatically install MetaPhlAn for microbial profiling. But having a standalone MetaPhlAn pipeline can be useful when your interest is in microbial profiling rather than functional profiling. 
+```
+
+
+```bash
+conda create --name biobakery3 python=3.9
+conda activate biobakery3
+
+# Set conda channel priority:
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda config --add channels biobakery
+
+conda install humann -c biobakery
+conda install metaphlan -c bioconda.
+
+# Test the installation
+humann_test
+
+```
+
+
+
 <br>
 
 ## Creating `microbiome` env from YAML file

@@ -51,6 +51,7 @@ metaphlan-pipeline
 functional-and-metabolic-analysis-network-tools
 humann-pipeline
 installing-microbiome-pipeline-using-mamba
+demo-installing-metaphlan-and-humann
 creating-microbiome-env-from-yaml-file
 imap-github-repos
 essential-software-rulegraph

@@ -73,7 +73,7 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">IMAP-Part 1: Essential Toolkit</a></li>
+<li><a class="" href="index.html">IMAP-Part 01: Essential Toolkit</a></li>
 <li class="book-part">SOFTWARE CATEGORIES</li>
 <li><a class="" href="types-of-essential-software.html"><span class="header-section-number">1</span> Types of Essential Software</a></li>
 <li><a class="" href="environment-management-system.html"><span class="header-section-number">2</span> Environment Management System</a></li>
@@ -216,25 +216,55 @@
 <span id="cb34-3"><a href="microbiome-bioinformatics-tools.html#cb34-3" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda metaphors</span>
 <span id="cb34-4"><a href="microbiome-bioinformatics-tools.html#cb34-4" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> biobakery humann</span>
 <span id="cb34-5"><a href="microbiome-bioinformatics-tools.html#cb34-5" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> bioconda humann</span></code></pre></div>
+</div>
+<div id="demo-installing-metaphlan-and-humann" class="section level2" number="5.6">
+<h2>
+<span class="header-section-number">5.6</span> Demo installing MetaPhlAn and HUMAnN<a class="anchor" aria-label="anchor" href="#demo-installing-metaphlan-and-humann"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>We will demonstrate how to create a new environment named <code>biobakery3</code> and install MetaPhlAn and HUMAnN pipelines.</li>
+</ul>
+<div class="tmbinfo">
+<p>
+Note: When installing HUMAnN e.g using <code>conda</code> it will
+also automatically install MetaPhlAn for microbial profiling. But having
+a standalone MetaPhlAn pipeline can be useful when your interest is in
+microbial profiling rather than functional profiling.
+</p>
+</div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="microbiome-bioinformatics-tools.html#cb35-1" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> biobakery3 python=3.9</span>
+<span id="cb35-2"><a href="microbiome-bioinformatics-tools.html#cb35-2" tabindex="-1"></a><span class="ex">conda</span> activate biobakery3</span>
+<span id="cb35-3"><a href="microbiome-bioinformatics-tools.html#cb35-3" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="microbiome-bioinformatics-tools.html#cb35-4" tabindex="-1"></a><span class="co"># Set conda channel priority:</span></span>
+<span id="cb35-5"><a href="microbiome-bioinformatics-tools.html#cb35-5" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels defaults</span>
+<span id="cb35-6"><a href="microbiome-bioinformatics-tools.html#cb35-6" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels bioconda</span>
+<span id="cb35-7"><a href="microbiome-bioinformatics-tools.html#cb35-7" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels conda-forge</span>
+<span id="cb35-8"><a href="microbiome-bioinformatics-tools.html#cb35-8" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels biobakery</span>
+<span id="cb35-9"><a href="microbiome-bioinformatics-tools.html#cb35-9" tabindex="-1"></a></span>
+<span id="cb35-10"><a href="microbiome-bioinformatics-tools.html#cb35-10" tabindex="-1"></a><span class="ex">conda</span> install humann <span class="at">-c</span> biobakery</span>
+<span id="cb35-11"><a href="microbiome-bioinformatics-tools.html#cb35-11" tabindex="-1"></a><span class="ex">conda</span> install metaphlan <span class="at">-c</span> bioconda.</span>
+<span id="cb35-12"><a href="microbiome-bioinformatics-tools.html#cb35-12" tabindex="-1"></a></span>
+<span id="cb35-13"><a href="microbiome-bioinformatics-tools.html#cb35-13" tabindex="-1"></a><span class="co"># Test the installation</span></span>
+<span id="cb35-14"><a href="microbiome-bioinformatics-tools.html#cb35-14" tabindex="-1"></a><span class="ex">humann_test</span></span></code></pre></div>
 <p><br></p>
 </div>
-<div id="creating-microbiome-env-from-yaml-file" class="section level2" number="5.6">
+<div id="creating-microbiome-env-from-yaml-file" class="section level2" number="5.7">
 <h2>
-<span class="header-section-number">5.6</span> Creating <code>microbiome</code> env from YAML file<a class="anchor" aria-label="anchor" href="#creating-microbiome-env-from-yaml-file"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.7</span> Creating <code>microbiome</code> env from YAML file<a class="anchor" aria-label="anchor" href="#creating-microbiome-env-from-yaml-file"><i class="fas fa-link"></i></a>
 </h2>
 <p>Filename: environment.yml</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="microbiome-bioinformatics-tools.html#cb35-1" tabindex="-1"></a><span class="ex">name:</span> microbiome</span>
-<span id="cb35-2"><a href="microbiome-bioinformatics-tools.html#cb35-2" tabindex="-1"></a><span class="ex">channels:</span></span>
-<span id="cb35-3"><a href="microbiome-bioinformatics-tools.html#cb35-3" tabindex="-1"></a>    <span class="ex">-</span> bioconda</span>
-<span id="cb35-4"><a href="microbiome-bioinformatics-tools.html#cb35-4" tabindex="-1"></a>    <span class="ex">-</span> biobakery</span>
-<span id="cb35-5"><a href="microbiome-bioinformatics-tools.html#cb35-5" tabindex="-1"></a>    <span class="ex">-</span> qiime2</span>
-<span id="cb35-6"><a href="microbiome-bioinformatics-tools.html#cb35-6" tabindex="-1"></a><span class="ex">dependencies:</span></span>
-<span id="cb35-7"><a href="microbiome-bioinformatics-tools.html#cb35-7" tabindex="-1"></a>    <span class="ex">-</span> mothur =1.48.0</span>
-<span id="cb35-8"><a href="microbiome-bioinformatics-tools.html#cb35-8" tabindex="-1"></a>    <span class="ex">-</span> qiime2 =2023.2.0</span>
-<span id="cb35-9"><a href="microbiome-bioinformatics-tools.html#cb35-9" tabindex="-1"></a>    <span class="ex">-</span> metaphor =4.0.6</span>
-<span id="cb35-10"><a href="microbiome-bioinformatics-tools.html#cb35-10" tabindex="-1"></a>    <span class="ex">-</span> humann =3.6</span></code></pre></div>
-<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="microbiome-bioinformatics-tools.html#cb36-1" tabindex="-1"></a><span class="ex">conda</span> activate base</span>
-<span id="cb36-2"><a href="microbiome-bioinformatics-tools.html#cb36-2" tabindex="-1"></a><span class="ex">mamba</span> env create <span class="at">--name</span> microbiome <span class="at">--file</span> environment.yaml</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="microbiome-bioinformatics-tools.html#cb36-1" tabindex="-1"></a><span class="ex">name:</span> microbiome</span>
+<span id="cb36-2"><a href="microbiome-bioinformatics-tools.html#cb36-2" tabindex="-1"></a><span class="ex">channels:</span></span>
+<span id="cb36-3"><a href="microbiome-bioinformatics-tools.html#cb36-3" tabindex="-1"></a>    <span class="ex">-</span> bioconda</span>
+<span id="cb36-4"><a href="microbiome-bioinformatics-tools.html#cb36-4" tabindex="-1"></a>    <span class="ex">-</span> biobakery</span>
+<span id="cb36-5"><a href="microbiome-bioinformatics-tools.html#cb36-5" tabindex="-1"></a>    <span class="ex">-</span> qiime2</span>
+<span id="cb36-6"><a href="microbiome-bioinformatics-tools.html#cb36-6" tabindex="-1"></a><span class="ex">dependencies:</span></span>
+<span id="cb36-7"><a href="microbiome-bioinformatics-tools.html#cb36-7" tabindex="-1"></a>    <span class="ex">-</span> mothur =1.48.0</span>
+<span id="cb36-8"><a href="microbiome-bioinformatics-tools.html#cb36-8" tabindex="-1"></a>    <span class="ex">-</span> qiime2 =2023.2.0</span>
+<span id="cb36-9"><a href="microbiome-bioinformatics-tools.html#cb36-9" tabindex="-1"></a>    <span class="ex">-</span> metaphor =4.0.6</span>
+<span id="cb36-10"><a href="microbiome-bioinformatics-tools.html#cb36-10" tabindex="-1"></a>    <span class="ex">-</span> humann =3.6</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb37-1"><a href="microbiome-bioinformatics-tools.html#cb37-1" tabindex="-1"></a><span class="ex">conda</span> activate base</span>
+<span id="cb37-2"><a href="microbiome-bioinformatics-tools.html#cb37-2" tabindex="-1"></a><span class="ex">mamba</span> env create <span class="at">--name</span> microbiome <span class="at">--file</span> environment.yaml</span></code></pre></div>
 
 </div>
 </div>
@@ -263,7 +293,8 @@
 <a class="nav-link" href="#functional-and-metabolic-analysis-network-tools"><span class="header-section-number">5.4</span> Functional and Metabolic Analysis Network tools</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#humann-pipeline"><span class="header-section-number">5.4.1</span> HUMAnN pipeline</a></li></ul>
 </li>
 <li><a class="nav-link" href="#installing-microbiome-pipeline-using-mamba"><span class="header-section-number">5.5</span> Installing microbiome pipeline using mamba</a></li>
-<li><a class="nav-link" href="#creating-microbiome-env-from-yaml-file"><span class="header-section-number">5.6</span> Creating microbiome env from YAML file</a></li>
+<li><a class="nav-link" href="#demo-installing-metaphlan-and-humann"><span class="header-section-number">5.6</span> Demo installing MetaPhlAn and HUMAnN</a></li>
+<li><a class="nav-link" href="#creating-microbiome-env-from-yaml-file"><span class="header-section-number">5.7</span> Creating microbiome env from YAML file</a></li>
 </ul>
 
       <div class="book-extra">
@@ -282,7 +313,7 @@
     <div class="row">
       <div class="col-12 col-md-6 mt-3">
         <p><strong><u><a class="text-light" href="https://microbiome.complexdatainsights.com"><big>IMAP:</big> Integrated Microbiome Analysis Pipelines</a></u></strong>: End-to-End Practical User Guides Using Integrated Approaches</p>
-<br><p>Authored by Teresia Mrema-Buza, Last updated: <b>2024-02-17</b>.</p>
+<br><p>Authored by Teresia Mrema-Buza, Last updated: <b>2024-02-19</b>.</p>
 <br>
 </div>
       <div class="col-12 col-md-6 mt-3">
