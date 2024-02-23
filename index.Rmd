@@ -29,19 +29,6 @@ description: |
 ```{r lockfile, include=FALSE}
 source("_common.R")
 
-# renv::use("compiler", 
-#           "bookdown", 
-#           "fastmap", 
-#           "cli", 
-#           "htmltools", 
-#           "tools", 
-#           "rstudioapi", 
-#           "yaml", 
-#           "rmarkdown", 
-#           "knitr", 
-#           "xfun", 
-#           "digest", 
-#           "rlang")
 ```
 
 
@@ -60,35 +47,25 @@ source("_common.R")
 
 
 
-# <u>IMAP-Part 01</u>: Microbiome Data Analysis Toolkit for Reproducible Results {-#analysis-toolkit}
+# **IMAP-Part 01**: Microbiome Data Analysis Toolkit for Reproducible Results {-#analysis-toolkit}
 
-<br>
-<br>
-![Book cover](images/software.png)
-<br>
-<br>
+![Software](images/software.png)
 
-## Significance of reproducibility in microbiome data analysis
+## Fostering Reproducibility in Microbiome Data Analysis {-}
+
 In the realm of microbiome data analysis, reproducibility is a cornerstone that ensures the reliability and integrity of research findings. The ability to reproduce analyses allows researchers to validate results, verify methodologies, and build upon existing work. Reproducibility fosters transparency, enabling the scientific community to scrutinize and refine studies, ultimately enhancing the robustness of conclusions and contributing to the cumulative knowledge base. This practical user guide is more than just a manual; it's your dynamic gateway to preparing for a successful microbiome data analysis journey.
 
-In this guide, you can expect hands-on demonstrations illustrating how to:
-
-- Set up a robust working environment tailored for microbiome data analysis.
-- Install and configure essential tools, ensuring a smooth and efficient start to your analytical journey.
-
-As you explore the curated tools, you'll not only gain theoretical knowledge but also practical insights into their implementation. Each step is designed to empower you with the skills needed to navigate the intricacies of microbiome data analysis confidently.
-
-## How to Use:
-- Each chapter contains R code snippets enclosed in ```R code chunks.
+## How to Use {-}
+- Succeeding chapters may contain R code snippets enclosed in R chunks.
 - Follow along and execute the provided code snippets in your R environment for hands-on learning.
 
-## Target Audience:
-Data analysts, scientists, and researchers.
-Anyone interested in reproducible R projects.
+## What to Expect {-}
+- **Setting Up a Robust Environment:** Learn how to establish a solid working foundation tailored for microbiome data analysis.
+- **Installing and Configuring Essential Tools:** Ensure a smooth and efficient start to your analytical journey by mastering the installation and configuration of crucial tools.
 
-## Prerequisites:
+As you explore these curated tools, you'll gain not only theoretical knowledge but also practical insights into their implementation. Each step is designed to empower you with the skills needed to navigate the intricacies of microbiome data analysis confidently.
+
+## Prerequisites {-}
 Basic knowledge of R and RStudio.
 
-Enjoy your learning journey with renv!
-
-
+Enjoy your learning journey with essential toolkits!

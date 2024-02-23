@@ -46,7 +46,5 @@ info
 ```
 
 
-> For a detailed overview of the tools and versions suitable for this guide, I encourage you to explore the session information saved in the accompanying text file named `session_info.txt`,
-
 
 

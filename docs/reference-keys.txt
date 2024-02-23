@@ -1,5 +1,5 @@
 types-of-essential-software
-environment-and-package-management-system
+project-environment-and-package-management-system
 workflow-management-system
 quality-control-tools
 bioinformatics-analysis-pipelines

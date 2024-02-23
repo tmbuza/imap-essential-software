@@ -4,7 +4,7 @@
 
 In the world of microbiome data analysis, a strong foundation begins with the installation of essential tools to ensure a smooth and efficient workflow. The required software includes:
 
-## Environment and Package Management System 
+## Project Environment and Package Management System 
 Establish a robust computational environment using our toolkit, providing essential tools for managing packages and dependencies.
 
 ## Workflow Management System 

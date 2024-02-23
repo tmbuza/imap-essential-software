@@ -2,7 +2,7 @@
 title: "<big>IMAP:</big> Integrated Microbiome Analysis Pipelines"
 subtitle: "End-to-End Practical User Guides Using Integrated Approaches"
 date:
-- <b>2024-02-19</b>
+- <b>2024-02-23</b>
 author: Teresia Mrema-Buza
 site: bookdown::bookdown_site
 documentclass: book
@@ -20,7 +20,7 @@ citation_package:
 url: https://tmbuza.github.io/imap-essential-software/
 cover-image: images/planning.png
 email_address: "ndelly@gmail.com"
-github-repo: tmbuza/imap-project-overview
+github-repo: tmbuza/imap-essential-software
 biblio-style: apalike
 description: |
   | This part will be added before release.
@@ -44,21 +44,25 @@ description: |
 
 
 
-# <u>IMAP-Part 01</u>: Essential Toolkit {-#analysis-toolkit}
+# **IMAP-Part 01**: Microbiome Data Analysis Toolkit for Reproducible Results {-#analysis-toolkit}
 
-<br>
-<br>
-![Book cover](images/software.png)
-<br>
-<br>
+![Software](images/software.png)
 
-Welcome to the **Microbiome Data Analysis Toolkit**! This practical user guide is more than just a manual; it's your dynamic gateway to preparing for a successful microbiome data analysis journey. The tools meticulously described in this guide are not only carefully curated but are also accompanied by step-by-step demonstrations to skillfully guide you through each stage of the process.
+## Fostering Reproducibility in Microbiome Data Analysis {-}
 
-In this guide, you can expect hands-on demonstrations illustrating how to:
+In the realm of microbiome data analysis, reproducibility is a cornerstone that ensures the reliability and integrity of research findings. The ability to reproduce analyses allows researchers to validate results, verify methodologies, and build upon existing work. Reproducibility fosters transparency, enabling the scientific community to scrutinize and refine studies, ultimately enhancing the robustness of conclusions and contributing to the cumulative knowledge base. This practical user guide is more than just a manual; it's your dynamic gateway to preparing for a successful microbiome data analysis journey.
 
-- Set up a robust working environment tailored for microbiome data analysis.
-- Install and configure essential tools, ensuring a smooth and efficient start to your analytical journey.
+## How to Use {-}
+- Succeeding chapters may contain R code snippets enclosed in R chunks.
+- Follow along and execute the provided code snippets in your R environment for hands-on learning.
 
-As you explore the curated tools, you'll not only gain theoretical knowledge but also practical insights into their implementation. Each step is designed to empower you with the skills needed to navigate the intricacies of microbiome data analysis confidently.
+## What to Expect {-}
+- **Setting Up a Robust Environment:** Learn how to establish a solid working foundation tailored for microbiome data analysis.
+- **Installing and Configuring Essential Tools:** Ensure a smooth and efficient start to your analytical journey by mastering the installation and configuration of crucial tools.
 
+As you explore these curated tools, you'll gain not only theoretical knowledge but also practical insights into their implementation. Each step is designed to empower you with the skills needed to navigate the intricacies of microbiome data analysis confidently.
 
+## Prerequisites {-}
+Basic knowledge of R and RStudio.
+
+Enjoy your learning journey with essential toolkits!
