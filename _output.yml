@@ -8,6 +8,7 @@ bookdown::bs4_book:
   split_bib: true
   repo:
     base: https://github.com/tmbuza/imap-essential-software.git
+    edit: https://github.com/tmbuza/imap-essential-software.git/blob/gh-pages/%s
     branch: gh-pages
     icon: "fas fa-air-freshener"
   theme:
