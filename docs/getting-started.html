@@ -4,18 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>IMAP-Part 01: Microbiome Data Analysis Toolkit for Reproducible Results | IMAP: Integrated Microbiome Analysis Pipelines</title>
+<title>2 Getting Started | IMAP: Integrated Microbiome Analysis Pipelines</title>
 <meta name="author" content="Teresia Mrema-Buza">
-<meta name="description" content="This part will be added before release.">
+<meta name="description" content="Welcome to Chapter X of our data analysis guide! Before diving into the content, it’s important to set up your R environment for reproducibility. If you haven’t already, follow the steps in the...">
 <meta name="generator" content="bookdown 0.37 with bs4_book()">
-<meta property="og:title" content="IMAP-Part 01: Microbiome Data Analysis Toolkit for Reproducible Results | IMAP: Integrated Microbiome Analysis Pipelines">
+<meta property="og:title" content="2 Getting Started | IMAP: Integrated Microbiome Analysis Pipelines">
 <meta property="og:type" content="book">
-<meta property="og:url" content="https://tmbuza.github.io/imap-essential-software/">
+<meta property="og:url" content="https://tmbuza.github.io/imap-essential-software/getting-started.html">
 <meta property="og:image" content="https://tmbuza.github.io/imap-essential-software/images/planning.png">
-<meta property="og:description" content="This part will be added before release.">
+<meta property="og:description" content="Welcome to Chapter X of our data analysis guide! Before diving into the content, it’s important to set up your R environment for reproducibility. If you haven’t already, follow the steps in the...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IMAP-Part 01: Microbiome Data Analysis Toolkit for Reproducible Results | IMAP: Integrated Microbiome Analysis Pipelines">
-<meta name="twitter:description" content="This part will be added before release.">
+<meta name="twitter:title" content="2 Getting Started | IMAP: Integrated Microbiome Analysis Pipelines">
+<meta name="twitter:description" content="Welcome to Chapter X of our data analysis guide! Before diving into the content, it’s important to set up your R environment for reproducibility. If you haven’t already, follow the steps in the...">
 <meta name="twitter:image" content="https://tmbuza.github.io/imap-essential-software/images/planning.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -73,13 +73,14 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="active" href="index.html">IMAP-Part 01: Microbiome Data Analysis Toolkit for Reproducible Results</a></li>
+<li><a class="" href="index.html">IMAP-Part 01: Microbiome Data Analysis Toolkit for Reproducible Results</a></li>
 <li class="book-part">SOFTWARE CATEGORIES</li>
 <li><a class="" href="types-of-essential-software.html"><span class="header-section-number">1</span> Types of Essential Software</a></li>
-<li><a class="" href="environment-management-system.html"><span class="header-section-number">2</span> Environment Management System</a></li>
-<li><a class="" href="snakemake-workflow-management-system.html"><span class="header-section-number">3</span> Snakemake workflow management system</a></li>
-<li><a class="" href="data-science-visualization-tools.html"><span class="header-section-number">4</span> Data Science &amp; Visualization Tools</a></li>
-<li><a class="" href="microbiome-bioinformatics-tools.html"><span class="header-section-number">5</span> Microbiome Bioinformatics Tools</a></li>
+<li><a class="active" href="getting-started.html"><span class="header-section-number">2</span> Getting Started</a></li>
+<li><a class="" href="environment-management-system.html"><span class="header-section-number">3</span> Environment Management System</a></li>
+<li><a class="" href="snakemake-workflow-management-system.html"><span class="header-section-number">4</span> Snakemake workflow management system</a></li>
+<li><a class="" href="data-science-visualization-tools.html"><span class="header-section-number">5</span> Data Science &amp; Visualization Tools</a></li>
+<li><a class="" href="microbiome-bioinformatics-tools.html"><span class="header-section-number">6</span> Microbiome Bioinformatics Tools</a></li>
 <li class="book-part">APPENDIX</li>
 <li><a class="" href="imap-github-repos.html"><span class="header-section-number">A</span> IMAP GitHub Repos</a></li>
 <li><a class="" href="essential-software-rulegraph.html"><span class="header-section-number">B</span> Essential Software Rulegraph</a></li>
@@ -92,65 +93,25 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><!--bookdown:title:end--><!--bookdown:title:start--><div id="analysis-toolkit" class="section level1 unnumbered">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="getting-started" class="section level1" number="2">
 <h1>
-<strong>IMAP-Part 01</strong>: Microbiome Data Analysis Toolkit for Reproducible Results<a class="anchor" aria-label="anchor" href="#analysis-toolkit"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2</span> Getting Started<a class="anchor" aria-label="anchor" href="#getting-started"><i class="fas fa-link"></i></a>
 </h1>
-<div class="float">
-<img src="images/software.png" alt="Software"><div class="figcaption">Software</div>
-</div>
-<div id="fostering-reproducibility-in-microbiome-data-analysis" class="section level2 unnumbered">
-<h2>Fostering Reproducibility in Microbiome Data Analysis<a class="anchor" aria-label="anchor" href="#fostering-reproducibility-in-microbiome-data-analysis"><i class="fas fa-link"></i></a>
-</h2>
-<p>In the realm of microbiome data analysis, reproducibility is a cornerstone that ensures the reliability and integrity of research findings. The ability to reproduce analyses allows researchers to validate results, verify methodologies, and build upon existing work. Reproducibility fosters transparency, enabling the scientific community to scrutinize and refine studies, ultimately enhancing the robustness of conclusions and contributing to the cumulative knowledge base. This practical user guide is more than just a manual; it’s your dynamic gateway to preparing for a successful microbiome data analysis journey.</p>
-</div>
-<div id="how-to-use" class="section level2 unnumbered">
-<h2>How to Use<a class="anchor" aria-label="anchor" href="#how-to-use"><i class="fas fa-link"></i></a>
-</h2>
-<ul>
-<li>Succeeding chapters may contain R code snippets enclosed in R chunks.</li>
-<li>Follow along and execute the provided code snippets in your R environment for hands-on learning.</li>
-</ul>
-</div>
-<div id="what-to-expect" class="section level2 unnumbered">
-<h2>What to Expect<a class="anchor" aria-label="anchor" href="#what-to-expect"><i class="fas fa-link"></i></a>
-</h2>
-<ul>
-<li>
-<strong>Setting Up a Robust Environment:</strong> Learn how to establish a solid working foundation tailored for microbiome data analysis.</li>
-<li>
-<strong>Installing and Configuring Essential Tools:</strong> Ensure a smooth and efficient start to your analytical journey by mastering the installation and configuration of crucial tools.</li>
-</ul>
-<p>As you explore these curated tools, you’ll gain not only theoretical knowledge but also practical insights into their implementation. Each step is designed to empower you with the skills needed to navigate the intricacies of microbiome data analysis confidently.</p>
-</div>
-<div id="prerequisites" class="section level2 unnumbered">
-<h2>Prerequisites<a class="anchor" aria-label="anchor" href="#prerequisites"><i class="fas fa-link"></i></a>
-</h2>
-<p>Basic knowledge of R and RStudio.</p>
-<p>Enjoy your learning journey with essential toolkits!</p>
+<p>Welcome to Chapter X of our data analysis guide! Before diving into the content, it’s important to set up your R environment for reproducibility. If you haven’t already, follow the steps in the <a href="https/tmbuza.github.io/imap-rproject-management">“Setting up and Using <code>renv</code> for Reproducibility”</a> section to initialize <code>renv</code> and manage your project dependencies effectively.</p>
+<p>Now, let’s get started with the exciting content of this chapter!</p>
 
 </div>
-</div>
-
-
-
   <div class="chapter-nav">
-<div class="empty"></div>
-<div class="next"><a href="types-of-essential-software.html"><span class="header-section-number">1</span> Types of Essential Software</a></div>
+<div class="prev"><a href="types-of-essential-software.html"><span class="header-section-number">1</span> Types of Essential Software</a></div>
+<div class="next"><a href="environment-management-system.html"><span class="header-section-number">3</span> Environment Management System</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#analysis-toolkit">IMAP-Part 01: Microbiome Data Analysis Toolkit for Reproducible Results</a></li>
-<li><a class="nav-link" href="#fostering-reproducibility-in-microbiome-data-analysis">Fostering Reproducibility in Microbiome Data Analysis</a></li>
-<li><a class="nav-link" href="#how-to-use">How to Use</a></li>
-<li><a class="nav-link" href="#what-to-expect">What to Expect</a></li>
-<li><a class="nav-link" href="#prerequisites">Prerequisites</a></li>
-</ul>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#getting-started"><span class="header-section-number">2</span> Getting Started</a></li></ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/tmbuza/imap-essential-software.git/blob/gh-pages/index.Rmd">View source <i class="fas fa-air-freshener"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/tmbuza/imap-essential-software.git/edit/gh-pages/index.Rmd">Edit this page <i class="fas fa-air-freshener"></i></a></li>
+<li><a id="book-source" href="https://github.com/tmbuza/imap-essential-software.git/blob/gh-pages/00-preface.Rmd">View source <i class="fas fa-air-freshener"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/tmbuza/imap-essential-software.git/edit/gh-pages/00-preface.Rmd">Edit this page <i class="fas fa-air-freshener"></i></a></li>
         </ul>
 </div>
     </nav>

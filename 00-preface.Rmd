@@ -23,6 +23,3 @@ Uncover insights from your microbiome datasets using advanced data analysis soft
 As your research demands evolve, our toolkit remains flexible and ready to adapt. Explore additional tools tailored to meet the specific requirements of your microbiome data analysis.
 
 Feel free to navigate the [repository](https://github.com/tmbuza/imap-software-requirements.git), explore the tools, and follow the sequential order to enhance your understanding and proficiency in microbiome data analysis. We're excited to support your exploration of the fascinating world of microbial communities!
-
-Happy analyzing!
-

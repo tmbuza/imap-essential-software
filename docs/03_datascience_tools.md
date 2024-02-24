@@ -6,11 +6,14 @@ The most powerful tools for analyzing and visualizing microbiome data include:
 - Python
 - Jupyter notebook
 
+- Python
+- Jupyter notebook
 
-<!-- # Basic Software -->
+> Before you proceed with the installations, ensure you set up a reproducible environment using `renv`. Follow the ["Setting up R project for reproducibility (IMAP-RENV)"](https://tmbuza.github.io/imap-rproject-management/) to initialize `renv` and manage your project dependencies effectively.
+
+
 ## Installing R Environment 
 
-<!-- <a href=""><img src="images/rlogoblue.png" alt="R Software" width="10" style="padding: 0 15px; float: left;"/></a> -->
 **R** is free software for statistical computing, data analysis, and graphics [@RCoreTeam2021]. We can install the R application on a personal computer to process the R programming language. You can download and install R using these steps:
 
 1. Go to [https://www.r-project.org/](https://www.r-project.org/).

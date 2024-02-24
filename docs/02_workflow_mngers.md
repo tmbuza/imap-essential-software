@@ -9,12 +9,12 @@ mamba install -c bioconda snakemake
 ```
 
 ## Install snakemake minimal
-```
+```bash
 mamba install -c bioconda snakemake-minimal
 ```
 
 ## Install snakemake wrappers
-```
+```bash
 mamba install -c bioconda snakemake-wrapper-utils
 ```
 
