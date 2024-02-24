@@ -46,7 +46,7 @@ description: |
 
 # **IMAP-Part 01**: Microbiome Data Analysis Toolkit for Reproducible Results {-#analysis-toolkit}
 
-![Software](images/software.png)
+![](images/software.png)
 
 ## Fostering Reproducibility in Microbiome Data Analysis {-}
 
