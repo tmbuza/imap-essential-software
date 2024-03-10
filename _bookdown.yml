@@ -19,7 +19,7 @@ rmd_files:
     - 04_bioinformatics_tools.Rmd
     - 99-appendix.Rmd
     - 999-references.Rmd
-    - 9999-footer.Rmd
+# - 9999-footer.Rmd
   
 
 
