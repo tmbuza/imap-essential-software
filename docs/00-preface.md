@@ -14,7 +14,7 @@ Efficiency is paramount in microbiome research. Explore our toolkit's workflow m
 Maintain the integrity of your microbiome datasets by employing powerful quality control tools. These tools are crucial for validating data quality and ensuring the reliability of your results.
 
 ## Bioinformatics Analysis Pipelines 
-Delve into the intricacies of microbial communities with our specialized bioinformatics analysis pipelines. Tailored to handle the complexity of metagenomic data, these pipelines guide you through comprehensive analyses.
+Delve into the complexities of microbial communities with our specialized bioinformatics analysis pipelines. Tailored to handle the complexity of metagenomic data, these pipelines guide you through comprehensive analyses.
 
 ## Data Analysis Software
 Uncover insights from your microbiome datasets using advanced data analysis software. Our toolkit includes tools that enable you to visualize and interpret the diversity and abundance of microbial taxa in your samples effectively.

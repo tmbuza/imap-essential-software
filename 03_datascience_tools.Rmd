@@ -11,12 +11,13 @@ The most powerful tools for analyzing and visualizing microbiome data include:
 ## Installing R Environment 
 
 <!-- <a href=""><img src="images/rlogoblue.png" alt="R Software" width="10" style="padding: 0 15px; float: left;"/></a> -->
-**R** is free software for statistical computing, data analysis, and graphics [@RCoreTeam2021]. We can install the R application on a personal computer to process the R programming language. You can download and install R using these steps:
 
-1. Go to [https://www.r-project.org/](https://www.r-project.org/).
-2. On the left, under Download, click on [CRAN](http://cran.r-project.org/mirrors.html) to access the mirrors. CRAN (Comprehensive R Archive Network) is mirrored on nearly 100 registered servers in almost 50 regions worldwide. See [CRAN mirror status](https://cran.r-project.org/mirmon_report.html).
-3. https://cloud.r-project.org/ Pick a mirror close to your location, and automatically R will connect to that server, ready to download the package files.
-4. Select a compatible platform to download precompiled binary distributions of the base system, which also come with contributed packages.
+[R](https://www.r-project.org/) is open-source software designed for statistical computing, data analysis, and graphics[3]. You can install the R application on your personal computer to work with the R programming language. Follow these steps below to download and install R:
+
+1. Visit [https://www.r-project.org/](https://www.r-project.org/).
+2. On the left side, under 'Download,' click on CRAN to access the mirrors. CRAN (Comprehensive R Archive Network) is mirrored on nearly 100 registered servers across almost 50 regions worldwide. Check the [CRAN mirror status](https://cloud.r-project.org/).
+   - Choose a mirror close to your location; R will automatically connect to that server for downloading the package files.
+3. Select a compatible platform to download precompiled binary distributions of the base system, which also includes contributed packages.
 
 <br>
 
@@ -24,25 +25,27 @@ The most powerful tools for analyzing and visualizing microbiome data include:
 
 <!-- <a href=""><img src="images/rstudio.png" alt="RStudio" width="10" style="padding: 0 15px; float: left;"/></a> -->
 
-**RStudio** is a free program integrating with R as an IDE (Integrated Development Environment) to implement most analytical functionalities [@RStudioTeam2021]. For effective analysis, we must install R before installing RStudio. We will intensively use RStudio IDE to give us a user interface. We are interested in **RStudio Desktop**, which is an open-source regular desktop application. You can install it like this:
+**RStudio** is a free program that functions as an IDE (Integrated Development Environment), seamlessly integrating with R to implement a wide range of analytical functionalities [@RStudioTeam2021]. For effective analysis, it's essential to install R before proceeding with the installation of RStudio. We will extensively utilize the RStudio IDE, which provides a user-friendly interface. Specifically, we are interested in **RStudio Desktop**, an open-source desktop application. Follow these steps to install it:
 
-1. Go to [https://rstudio.com/products/rstudio/](https://rstudio.com/products/rstudio/).
-2. Click on [RStudio Desktop](https://rstudio.com/products/rstudio/#rstudio-desktop) box to move to the open source edition.
-3. Choose your preferred [license](https://rstudio.com/products/rstudio/download/) either open source or commercial.
-4. Select [installer](https://rstudio.com/products/rstudio/download/#download) compatible to your operating system.
-
+1. Visit [RStudio](https://rstudio.com/products/rstudio/).
+2. Click on the [RStudio Desktop](https://rstudio.com/products/rstudio/#rstudio-desktop) box to access the open-source edition.
+3. Choose your preferred [license](https://rstudio.com/products/rstudio/download/), whether it's open source or commercial.
+4. Select the [installer](https://rstudio.com/products/rstudio/download/#download) that is compatible with your operating system.
 <br>
 
 
 ![Screen shot of RStudio User Interface](images/RStudioIDE.png)
 
+
 <br>
 
 ## Installing Python
-Python is installed through several methods. The most famous ways include:
+Python can be installed using various methods, with some of the most popular approaches being:
 
-- Direct [downloads](https://www.python.org/downloads/)
-- Via environment and package management systems, for example [using conda](https://www.practicaldatascience.org/html/setup_python.html) like so:
+1. **Direct Downloads:** Obtain Python directly from the [official Python website](https://www.python.org/downloads/) by downloading the installer for your operating system.
+
+2. **Environment and Package Management Systems:** Utilize tools like conda to manage Python environments and install packages. For instance, you can use the following command with conda:
+
 
 ```bash
 conda config --add channels conda-forge

@@ -1,14 +1,17 @@
 # Microbiome Bioinformatics Tools
 ## Read quality control Tools
-We categorized the quality control (QC) tools under the bioinformatics tools. Most of the QC tools are available via the bioconda channel. Below are some of the most common bioinformatics tools used to understand read features and their quality scores. You can click on the hyperlink to learn more about installing the software.
+
+We have categorized quality control (QC) tools under bioinformatics tools. Most of these QC tools are available via the bioconda channel. Below are some common bioinformatics tools used to understand read features and their quality scores. You can click on the hyperlinks to learn more about installing the software:
 
 - [Seqkit](https://anaconda.org/bioconda/seqkit/) for simple statistics [@seqkit2016].
 - [FastQC](https://anaconda.org/bioconda/fastqc/) for quality assessment of bases [@fastqc2018].
 - [MultiQC](https://anaconda.org/bioconda/multiqc/) for summarizing FastQC metrics [@multiqc2016].
 - [BBMap](https://anaconda.org/bioconda/bbmap) platform for read trimming and decontamination [@bbmap2016].
 - [Trimmommatic](https://anaconda.org/bioconda/trimmomatic/) is a flexible read-trimming tool for Illumina NGS data [@trimmomatic2014].
-- [Kneaddata](https://anaconda.org/bioconda/kneaddata/) via bioconda channel for performing quality control on metagenomic sequencing data. [@kneaddata2022].
+- [Kneaddata](https://anaconda.org/bioconda/kneaddata/) via bioconda channel for performing quality control on metagenomic sequencing data [@kneaddata2022].
 - [Kneaddata](https://anaconda.org/biobakery/kneaddata/) via the biobakery channel for performing quality control on metagenomic sequencing data [@kneaddata2022].
+
+
 
 > Note that the links for each tool may need to be updated. Make sure to check for the latest instructions online.
 

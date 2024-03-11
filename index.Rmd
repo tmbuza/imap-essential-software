@@ -74,6 +74,6 @@ In this guide, you can expect hands-on demonstrations illustrating how to:
 - Set up a robust working environment tailored for microbiome data analysis.
 - Install and configure essential tools, ensuring a smooth and efficient start to your analytical journey.
 
-As you explore the curated tools, you'll not only gain theoretical knowledge but also practical insights into their implementation. Each step is designed to empower you with the skills needed to navigate the intricacies of microbiome data analysis confidently.
+As you explore the curated tools, you'll not only gain theoretical knowledge but also practical insights into their implementation. Each step is designed to empower you with the skills needed to navigate the complexities of microbiome data analysis confidently.
 
 
