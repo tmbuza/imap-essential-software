@@ -108,6 +108,58 @@ info_filtered <- info[!grepl("pandoc|/Applications/RStudio.app/Contents/Resource
 
 # Save the filtered session info to a text file in the root directory without line numbers
 cat(info_filtered, file = "session_info.txt", sep = "\n")
+
+info
+```
+
+```
+##  [1] "─ Session info ───────────────────────────────────────────────────────────────"                                  
+##  [2] " setting  value"                                                                                                 
+##  [3] " version  R version 4.3.2 (2023-10-31)"                                                                          
+##  [4] " os       macOS Sonoma 14.4"                                                                                     
+##  [5] " system   aarch64, darwin20"                                                                                     
+##  [6] " ui       X11"                                                                                                   
+##  [7] " language (EN)"                                                                                                  
+##  [8] " collate  en_US.UTF-8"                                                                                           
+##  [9] " ctype    en_US.UTF-8"                                                                                           
+## [10] " tz       Africa/Dar_es_Salaam"                                                                                  
+## [11] " date     2024-03-11"                                                                                            
+## [12] " pandoc   3.1.3 @ /Users/tmbmacbookair/anaconda3/bin/ (via rmarkdown)"                                           
+## [13] ""                                                                                                                
+## [14] "─ Packages ───────────────────────────────────────────────────────────────────"                                  
+## [15] " ! package     * version date (UTC) lib source"                                                                  
+## [16] " P bookdown      0.37    2023-12-01 [?] CRAN (R 4.3.1)"                                                          
+## [17] " P bslib         0.6.1   2023-11-28 [?] CRAN (R 4.3.1)"                                                          
+## [18] " P cachem        1.0.8   2023-05-01 [?] CRAN (R 4.3.0)"                                                          
+## [19] " P cli           3.6.2   2023-12-11 [?] CRAN (R 4.3.1)"                                                          
+## [20] " P digest        0.6.34  2024-01-11 [?] CRAN (R 4.3.1)"                                                          
+## [21] " P downlit       0.4.3   2023-06-29 [?] CRAN (R 4.3.0)"                                                          
+## [22] " P evaluate      0.23    2023-11-01 [?] CRAN (R 4.3.1)"                                                          
+## [23] " P fastmap       1.1.1   2023-02-24 [?] CRAN (R 4.3.0)"                                                          
+## [24] " P fs            1.6.3   2023-07-20 [?] CRAN (R 4.3.0)"                                                          
+## [25] " P htmltools     0.5.7   2023-11-03 [?] CRAN (R 4.3.1)"                                                          
+## [26] " P jquerylib     0.1.4   2021-04-26 [?] CRAN (R 4.3.0)"                                                          
+## [27] " P jsonlite      1.8.8   2023-12-04 [?] CRAN (R 4.3.1)"                                                          
+## [28] " P knitr         1.45    2023-10-30 [?] CRAN (R 4.3.1)"                                                          
+## [29] " P lifecycle     1.0.4   2023-11-07 [?] CRAN (R 4.3.1)"                                                          
+## [30] " P memoise       2.0.1   2021-11-26 [?] CRAN (R 4.3.0)"                                                          
+## [31] " P R6            2.5.1   2021-08-19 [?] CRAN (R 4.3.0)"                                                          
+## [32] "   renv          1.0.4   2024-02-21 [1] CRAN (R 4.3.1)"                                                          
+## [33] " P rlang         1.1.3   2024-01-10 [?] CRAN (R 4.3.1)"                                                          
+## [34] " P rmarkdown     2.25    2023-09-18 [?] CRAN (R 4.3.1)"                                                          
+## [35] " P sass          0.4.8   2023-12-06 [?] CRAN (R 4.3.1)"                                                          
+## [36] " P sessioninfo * 1.2.2   2021-12-06 [?] CRAN (R 4.3.0)"                                                          
+## [37] " P withr         3.0.0   2024-01-16 [?] CRAN (R 4.3.1)"                                                          
+## [38] " P xfun          0.42    2024-02-08 [?] CRAN (R 4.3.1)"                                                          
+## [39] " P xml2          1.3.6   2023-12-04 [?] CRAN (R 4.3.1)"                                                          
+## [40] " P yaml          2.3.8   2023-12-11 [?] CRAN (R 4.3.1)"                                                          
+## [41] ""                                                                                                                
+## [42] " [1] /Users/tmbmacbookair/Dropbox/2024/TMB2024/imap-essential-software/renv/library/R-4.3/aarch64-apple-darwin20"
+## [43] " [2] /Users/tmbmacbookair/Library/Caches/org.R-project.R/R/renv/sandbox/R-4.3/aarch64-apple-darwin20/ac5c2659"   
+## [44] ""                                                                                                                
+## [45] " P ── Loaded and on-disk path mismatch."                                                                         
+## [46] ""                                                                                                                
+## [47] "──────────────────────────────────────────────────────────────────────────────"
 ```
 
 
