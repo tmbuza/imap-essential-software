@@ -8,7 +8,7 @@ To get started with the IMAP Essential Toolkit, follow these steps:
 
 1. **Review the Tools List:** Take a look at the list of essential tools provided in this repository.
 
-2. **Install the Tools:** Detailed installation instructions for each tool can be found on the [IMAP Essential Toolkit GitHub Pages](https://tmbuza.github.io/imap-essential-software/)). For installation guidance, navigate to the respective tool's page.
+2. **Install the Tools:** Detailed installation instructions for each tool can be found on the [IMAP Essential Toolkit GitHub Pages](https://tmbuza.github.io/imap-essential-software/). For installation guidance, navigate to the respective tool's page.
 
 3. **Note on Updates:** Please be aware that the tools included in this repository may be subject to updates by their developers. If you encounter any issues with the installation process or the provided instructions do not work, we recommend checking the tool's official website for the latest information and updates.
 
