@@ -25,7 +25,7 @@ href="https://github.com/tmbuza/imap-project-overview/">OVERVIEW</a></td>
 href="https://tmbuza.github.io/imap-project-overview/">Link</a></td>
 </tr>
 <tr class="even">
-<td><a href="https://github.com/tmbuza/imap-software-requirements/">PART
+<td><a href="https://github.com/tmbuza/imap-essential-software/">PART
 01</a></td>
 <td>Software requirement for microbiome data analysis with Snakemake
 workflows</td>
@@ -103,8 +103,23 @@ library(sessioninfo)
 # Get session info
 info <- capture.output(print(session_info()))
 
-# Exclude lines containing specific information (e.g., pandoc and library path)
-info_filtered <- info[!grepl("pandoc|/Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/|/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library", info)]
+# Define patterns to exclude
+library(sessioninfo)
+
+# Get session info
+info <- capture.output(print(session_info()))
+
+# Define patterns to exclude
+exclude_patterns <- c("/Users/.*", "Africa/Dar_es_Salaam") # This line is location-dependent
+
+# Exclude lines containing specific information
+info_filtered <- info[!grepl(paste(exclude_patterns, collapse = "|"), info)]
+
+# Save the filtered session info to a text file in the root directory without line numbers
+cat(info_filtered, file = "session_info.txt", sep = "\n")
+
+# Exclude lines containing specific information
+info_filtered <- info[!grepl(paste(exclude_patterns, collapse = "|"), info)]
 
 # Save the filtered session info to a text file in the root directory without line numbers
 cat(info_filtered, file = "session_info.txt", sep = "\n")
