@@ -8,7 +8,7 @@ The most powerful tools for analyzing and visualizing microbiome data include:
 
 ## Installing R Environment 
 
-[R](https://www.r-project.org/) is open-source software designed for statistical computing, data analysis, and graphics[3]. You can install the R application on your personal computer to work with the R programming language. Follow these steps to download and install R:
+[R](https://www.r-project.org/) is open-source software designed for statistical computing, data analysis, and graphics[@base2021]. You can install the R application on your personal computer to work with the R programming language. Follow these steps to download and install R:
 
 1. Visit [https://www.r-project.org/](https://www.r-project.org/).
 2. On the left side, under 'Download,' click on CRAN to access the mirrors. CRAN (Comprehensive R Archive Network) is mirrored on nearly 100 registered servers across almost 50 regions worldwide. Check the [CRAN mirror status](https://cloud.r-project.org/).
