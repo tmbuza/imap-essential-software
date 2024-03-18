@@ -8,13 +8,13 @@ To get started with the IMAP Essential Toolkit, follow these steps:
 
 1. **Review the Tools List:** Take a look at the list of essential tools provided in this repository.
 
-2. **Install the Tools:** Detailed installation instructions for each tool can be found on the [IMAP Essential Toolkit GitHub Pages](https://your-username.github.io/imap-essential-toolkit/). Navigate to the respective tool's page for installation guidance.
+2. **Install the Tools:** Detailed installation instructions for each tool can be found on the [IMAP Essential Toolkit GitHub Pages](https://tmbuza.github.io/imap-essential-software/). For installation guidance, navigate to the respective tool's page.
 
-3. **Note on Updates:** Please be aware that the tools included in this repository may be subject to updates by their developers. If you encounter any issues with the installation process or if the provided instructions do not work, we recommend checking the respective tool's official website for the latest information and updates.
+3. **Note on Updates:** Please be aware that the tools included in this repository may be subject to updates by their developers. If you encounter any issues with the installation process or the provided instructions do not work, we recommend checking the tool's official website for the latest information and updates.
 
 ## Contributing
 
-If you have suggestions for additional tools to include in the IMAP Essential Toolkit or if you encounter any issues with the installation process, feel free to open an issue or submit a pull request.
+If you have suggestions for additional tools to include in the IMAP Essential Toolkit or if you happen to encounter any issues with the installation process, feel free to open an issue or submit a pull request.
 
 So, let's get started and unlock the potential of your microbiome datasets with the IMAP Essential Toolkit!
 
